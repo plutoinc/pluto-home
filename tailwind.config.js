@@ -6,12 +6,12 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      "pluto-deep-blue": "#022D6B",
-      "pluto-dark-blue": "#054EB7",
-      "pluto-blue": "#0979FF",
-    },
     extend: {
+      colors: {
+        "pluto-deep-blue": "#022D6B",
+        "pluto-dark-blue": "#054EB7",
+        "pluto-blue": "#0979FF",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
