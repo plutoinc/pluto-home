@@ -14,7 +14,7 @@ module.exports = {
       },
       screens: {
         mobile: "810px",
-        desktop: "1440px",
+        desktop: "1200px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
