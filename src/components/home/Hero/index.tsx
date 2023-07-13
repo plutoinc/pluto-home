@@ -1,6 +1,6 @@
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
-import { ArrowDownCircle } from "react-feather";
+import ScrollButton from "../ScrollButton";
 
 const HomeHero: FC = () => {
   return (
@@ -15,10 +15,7 @@ const HomeHero: FC = () => {
           <br />
           We focus on in-depth research data and analytics from research papers.
         </div>
-        <div className="flex items-center gap-x-2.5 text-[#709edb]">
-          <ArrowDownCircle className="w-6" />
-          <div>Scroll to discover</div>
-        </div>
+        <ScrollButton />
       </div>
       {/* Lottie image later */}
     </PaddingDiv>
