@@ -13,7 +13,7 @@ module.exports = {
         "pluto-blue": "#0979FF",
       },
       screens: {
-        mobile: "810px",
+        tablet: "810px",
         desktop: "1200px",
       },
       backgroundImage: {
