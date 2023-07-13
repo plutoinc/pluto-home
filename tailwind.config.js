@@ -12,6 +12,10 @@ module.exports = {
         "pluto-dark-blue": "#054EB7",
         "pluto-blue": "#0979FF",
       },
+      screens: {
+        mobile: "810px",
+        desktop: "1440px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
