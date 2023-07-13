@@ -1,36 +1,39 @@
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
-import { ChevronDown } from "react-feather";
+import FoldableItem from "@/components/common/FoldableItem";
+import MaxWidth from "@/components/common/MaxWidth";
 
 const FEATURES = [
-  "Stay informed on the latest developments",
-  "Discover new experts",
-  "Understand funding patterns",
-  "Compare research capabilities",
-  "Measure research impact",
-  "Stay ahead of the curve",
-] as const;
+  {
+    title: "Stay informed on the latest developments",
+    content:
+      "Our technology makes it easy for you to understand current research issues and the development status of each technology.",
+  },
+  { title: "Discover new experts", content: "" },
+  { title: "Understand funding patterns", content: "" },
+  { title: "Compare research capabilities", content: "" },
+  { title: "Measure research impact", content: "" },
+  { title: "Stay ahead of the curve", content: "" },
+];
 
 const HomeSection4: FC = () => {
   return (
-    <PaddingDiv className="py-16 space-y-8 bg-[#e5f1ff]">
-      <div className="text-3xl font-extrabold">
-        Experience true research with us
-      </div>
-      <button className="w-full text-sm font-bold text-white p-3.5 bg-pluto-deep-blue rounded-lg shadow-sm">
-        Discover more
-      </button>
-      <div className="divide-y divide-blue-200">
-        {FEATURES.map((feature, index) => (
-          <div
-            key={index}
-            className="break-words flex items-center gap-x-5 justify-between font-bold py-3"
-          >
-            <div>{feature}</div>
-            <ChevronDown className="w-5 flex-shrink-0" />
+    <PaddingDiv className="py-16 bg-[#e5f1ff] tablet:py-48">
+      <MaxWidth className="space-y-8 tablet:flex tablet:gap-x-12 tablet:items-start tablet:space-y-0">
+        <div className="space-y-8 tablet:w-2/5">
+          <div className="text-3xl font-extrabold">
+            Experience true research with us
           </div>
-        ))}
-      </div>
+          <button className="w-full text-sm font-bold text-white p-3.5 bg-pluto-deep-blue rounded-lg shadow-sm">
+            Discover more
+          </button>
+        </div>
+        <div className="divide-y divide-blue-200 w-full">
+          {FEATURES.map(({ title, content }, index) => (
+            <FoldableItem key={index} title={title} content={content} />
+          ))}
+        </div>
+      </MaxWidth>
     </PaddingDiv>
   );
 };

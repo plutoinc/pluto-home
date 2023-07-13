@@ -1,3 +1,4 @@
+import MaxWidth from "@/components/common/MaxWidth";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
 
@@ -24,16 +25,18 @@ const Cards: FC = () => {
 
 const HomeSection5: FC = () => {
   return (
-    <PaddingDiv className="py-16 space-y-14">
-      <div className="space-y-2">
-        <div className="font-extrabold text-3xl">Our Partners</div>
-        <div className="text-lg">
-          Companies and universities of all sizes are innovating their research
-          with Pluto
+    <PaddingDiv className="py-16">
+      <MaxWidth className="space-y-14">
+        <div className="space-y-2">
+          <div className="font-extrabold text-3xl">Our Partners</div>
+          <div className="text-lg">
+            Companies and universities of all sizes are innovating their
+            research with Pluto
+          </div>
         </div>
-      </div>
-      <div>(대학교들)</div>
-      <Cards />
+        <div>(대학교들)</div>
+        <Cards />
+      </MaxWidth>
     </PaddingDiv>
   );
 };

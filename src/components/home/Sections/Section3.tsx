@@ -1,3 +1,4 @@
+import MaxWidth from "@/components/common/MaxWidth";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
 
@@ -5,17 +6,24 @@ interface Props {}
 
 const HomeSection3: FC<Props> = () => {
   return (
-    <PaddingDiv className="py-16 text-white bg-pluto-deep-blue space-y-8">
-      <div className="text-3xl font-extrabold">Pluto Technology</div>
-      <div className="text-lg">
-        Our tool extracts valuable information such as related topics,
-        companies, and patent data from each paper. Our database enables precise
-        entity recognition, not limited to bibliographic data. Additionally, we
-        crawl and link other data sources, such as grants and chemicals,
-        providing a more comprehensive research experience.
-      </div>
+    <PaddingDiv className="py-16 text-white bg-pluto-deep-blue tablet:py-48">
+      <MaxWidth className="space-y-8 tablet:space-y-48">
+        <div className="text-3xl font-extrabold tablet:text-5xl">
+          Pluto Technology
+        </div>
+        <div className="text-lg tablet:text-5xl break-words">
+          <span className="tablet:font-extrabold leading-[1.5]">
+            Our tool extracts valuable information such as related topics,
+            companies, and patent data from each paper.
+          </span>{" "}
+          <span className="leading-[1.5]">
+            Through our database, we provide a more comprehensive research
+            experience.
+          </span>
+        </div>
 
-      <div>(대충 비디오)</div>
+        <div>(대충 비디오)</div>
+      </MaxWidth>
     </PaddingDiv>
   );
 };
