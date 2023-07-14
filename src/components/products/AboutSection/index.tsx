@@ -29,6 +29,7 @@ const AboutSection: FC<Props> = () => {
               "Back your cases with integrated experimental results, funding information, patents, enterprise research, and more.",
             ]}
           />
+
           <AboutDropdown
             title="Cutting-edge research trends"
             description="Get quick access to the latest research trends we identify:"
