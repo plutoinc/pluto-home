@@ -1,7 +1,7 @@
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
 import { FAQ_LIST } from "./constant";
-import FoldableItem from "../../common/FoldableItem";
+import FoldableItem from "../../home/FoldableItem";
 import MaxWidth from "@/components/common/MaxWidth";
 import DesktopFAQ from "./DesktopFAQ";
 

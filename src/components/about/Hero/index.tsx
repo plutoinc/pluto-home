@@ -1,6 +1,6 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import PaddingDiv from "@/components/common/PaddingDiv";
-import ScrollButton from "@/components/home/ScrollButton";
+import ScrollToDiscover from "@/components/home/ScrollToDiscover";
 import { FC } from "react";
 
 interface Props {}
@@ -18,7 +18,7 @@ const AboutHero: FC<Props> = () => {
           <br />
           We focus on in-depth research data and analytics from research papers.
         </div>
-        <ScrollButton />
+        <ScrollToDiscover />
       </MaxWidth>
     </PaddingDiv>
   );

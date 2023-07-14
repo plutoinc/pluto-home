@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-const ScrollButton: FC<Props> = ({ className }) => {
+const ScrollToDiscover: FC<Props> = ({ className }) => {
   return (
     <div
       className={twMerge(
@@ -20,4 +20,4 @@ const ScrollButton: FC<Props> = ({ className }) => {
   );
 };
 
-export default ScrollButton;
+export default ScrollToDiscover;

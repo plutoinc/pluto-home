@@ -1,7 +1,7 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
-import ScrollButton from "../ScrollButton";
+import ScrollToDiscover from "../ScrollToDiscover";
 
 const HomeHero: FC = () => {
   return (
@@ -16,7 +16,7 @@ const HomeHero: FC = () => {
           <br />
           We focus on in-depth research data and analytics from research papers.
         </div>
-        <ScrollButton />
+        <ScrollToDiscover />
       </MaxWidth>
       {/* Lottie image later */}
     </PaddingDiv>

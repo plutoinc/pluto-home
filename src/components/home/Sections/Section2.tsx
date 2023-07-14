@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
+import { LOGOS } from "./constant";
 
 const ImageWrapper: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({
   children,
@@ -53,46 +54,18 @@ const HomeSection2: FC = () => {
           Scientists have observed a deceleration in scientific progress
         </div>
         <div className="space-y-8 desktop:space-y-0 desktop:flex desktop:gap-x-8">
-          <LinkWrapper href="https://blogs.scientificamerican.com/cross-check/is-science-hitting-a-wall-part-1/">
-            <ImageWrapper>
-              <Image
-                src="https://framerusercontent.com/images/2Tp0iY7jG3HdeuVMsFZtR9Yto.png"
-                alt=""
-                width={1000}
-                height={1000}
-              />
-            </ImageWrapper>
-          </LinkWrapper>
-          <LinkWrapper href="https://news.uchicago.edu/scientific-progress-slowing-james-evans">
-            <ImageWrapper>
-              <Image
-                src="https://framerusercontent.com/images/1PIVPAowzI2v2Q87do85PeUHfUI.png"
-                alt=""
-                width={1000}
-                height={1000}
-              />
-            </ImageWrapper>
-          </LinkWrapper>
-          <LinkWrapper href="https://www.theatlantic.com/science/archive/2018/11/diminishing-returns-science/575665/">
-            <ImageWrapper>
-              <Image
-                src="https://framerusercontent.com/images/ybg1js6IeYiwdHQE1VgwlNIJgQ.png"
-                alt=""
-                width={1000}
-                height={1000}
-              />
-            </ImageWrapper>
-          </LinkWrapper>
-          <LinkWrapper href="https://www.vox.com/future-perfect/2023/1/11/23549993/science-research-progress-studies-disruption-technology-artificial-intelligence-biotechnology">
-            <ImageWrapper className="w-16">
-              <Image
-                src="https://framerusercontent.com/images/3ajgWx1rprwWWnmWPUy0KLdnn4.png"
-                alt=""
-                width={1000}
-                height={1000}
-              />
-            </ImageWrapper>
-          </LinkWrapper>
+          {LOGOS.map((logo) => (
+            <LinkWrapper key={logo.href} href={logo.href}>
+              <ImageWrapper>
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={1000}
+                  height={1000}
+                />
+              </ImageWrapper>
+            </LinkWrapper>
+          ))}
         </div>
       </MaxWidth>
     </PaddingDiv>
