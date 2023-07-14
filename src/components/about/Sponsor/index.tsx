@@ -27,8 +27,8 @@ const SponsorList: FC = () => {
 
 const Sponsor: FC = () => {
   return (
-    <PaddingDiv className="py-16 bg-white">
-      <MaxWidth className="space-y-8">
+    <div className="bg-white">
+      <MaxWidth className="space-y-8 py-16">
         <div className="text-3xl font-bold tablet:font-extrabold">
           Backed by
         </div>
@@ -37,7 +37,7 @@ const Sponsor: FC = () => {
           <SponsorList />
         </div>
       </MaxWidth>
-    </PaddingDiv>
+    </div>
   );
 };
 

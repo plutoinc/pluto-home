@@ -7,8 +7,8 @@ interface Props {}
 
 const HomeSection1: FC<Props> = () => {
   return (
-    <PaddingDiv className="bg-pluto-deep-blue py-24 text-white text-3xl tablet:text-5xl">
-      <MaxWidth className="tablet:grid tablet:grid-cols-[1fr_minmax(260px,42%)] items-center justify-between gap-y-16 tablet:gap-x-8">
+    <div className="bg-pluto-deep-blue">
+      <MaxWidth className="tablet:grid py-24 text-white tablet:py-48 text-3xl tablet:text-5xl tablet:grid-cols-[1fr_minmax(260px,42%)] items-center justify-between gap-y-16 tablet:gap-x-8">
         <div className="leading-[1.5]">
           A <b>Rise</b> in Scientific Publications but A <b>Decline</b> in
           Groundbreaking Discoveries
@@ -22,7 +22,7 @@ const HomeSection1: FC<Props> = () => {
           />
         </div>
       </MaxWidth>
-    </PaddingDiv>
+    </div>
   );
 };
 

@@ -9,19 +9,21 @@ interface Props {}
 
 const FAQ: FC<Props> = () => {
   return (
-    <PaddingDiv className="py-16 divide-y divide-blue-200 bg-white tablet:py-24 tablet:bg-[#F4F9FF]">
-      <MaxWidth>
-        {FAQ_LIST.map((faq) => (
-          <FoldableItem
-            key={faq.question}
-            title={faq.question}
-            content={faq.answer}
-            className="desktop:hidden"
-          />
-        ))}
+    <div className="bg-white tablet:bg-[#F4F9FF]">
+      <MaxWidth className="py-16 tablet:py-24 ">
+        <div className="divide-y divide-blue-200">
+          {FAQ_LIST.map((faq) => (
+            <FoldableItem
+              key={faq.question}
+              title={faq.question}
+              content={faq.answer}
+              className="desktop:hidden"
+            />
+          ))}
+        </div>
         <DesktopFAQ />
       </MaxWidth>
-    </PaddingDiv>
+    </div>
   );
 };
 

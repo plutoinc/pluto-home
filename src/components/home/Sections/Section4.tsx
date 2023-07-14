@@ -8,15 +8,15 @@ import { FEATURES } from "./constant";
 
 const HomeSection4: FC = () => {
   return (
-    <PaddingDiv className="py-16 bg-[#e5f1ff] tablet:py-48">
-      <MaxWidth className="space-y-8 tablet:flex tablet:gap-x-12 tablet:items-start tablet:space-y-0">
+    <div className="bg-[#e5f1ff]">
+      <MaxWidth className="space-y-8 tablet:flex tablet:gap-x-12 tablet:items-start tablet:space-y-0 py-16 tablet:py-20">
         <div className="space-y-8 tablet:w-2/5">
           <div className="text-3xl font-extrabold">
             Experience true research with us
           </div>
           <Link
             href={PRODUCT_PATH}
-            className="w-full text-sm font-bold text-white p-3.5 bg-pluto-deep-blue rounded-lg shadow-sm block text-center"
+            className="text-sm h-10 text-white px-2.5 bg-pluto-deep-blue rounded-lg shadow text-center font-extrabold inline-flex items-center"
           >
             Discover more
           </Link>
@@ -27,7 +27,7 @@ const HomeSection4: FC = () => {
           ))}
         </div>
       </MaxWidth>
-    </PaddingDiv>
+    </div>
   );
 };
 

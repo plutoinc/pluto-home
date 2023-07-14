@@ -8,8 +8,8 @@ interface Props {}
 
 const HomeSection6: FC<Props> = () => {
   return (
-    <PaddingDiv className="py-16 bg-[#F0F6FF]">
-      <MaxWidth className="space-y-8">
+    <div className="bg-[#F0F6FF]">
+      <MaxWidth className="py-16 space-y-8">
         <div className="text-pluto-dark-blue font-extrabold text-3xl tablet:text-4xl desktop:text-5xl">
           We offer custom research analytics services
         </div>
@@ -37,7 +37,7 @@ const HomeSection6: FC<Props> = () => {
           />
         </div>
       </MaxWidth>
-    </PaddingDiv>
+    </div>
   );
 };
 

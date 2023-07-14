@@ -6,8 +6,8 @@ interface Props {}
 
 const BlogSection: FC<Props> = () => {
   return (
-    <PaddingDiv className="py-6 tablet:py-9 text-white bg-pluto-dark-blue">
-      <MaxWidth className="space-y-6">
+    <div className="bg-pluto-dark-blue">
+      <MaxWidth className="space-y-6 py-6 tablet:py-9 text-white">
         <div className="text-3xl tablet:text-5xl font-extrabold">
           Follow our blog!
         </div>
@@ -15,7 +15,7 @@ const BlogSection: FC<Props> = () => {
           Get the latest releases and news about Pluto.
         </div>
       </MaxWidth>
-    </PaddingDiv>
+    </div>
   );
 };
 

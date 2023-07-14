@@ -19,9 +19,9 @@ const CardItem: FC<CardProps> = ({ content, icon }) => {
 
 const ChangeToBring: FC = () => {
   return (
-    <PaddingDiv className="py-16 bg-gradient-to-b from-0% to-100% from-pluto-dark-blue to-pluto-deep-blue text-white tablet:py-24">
-      <MaxWidth className="space-y-8 tablet:space-y-24">
-        <div className="text-2xl font-medium tablet:text-5xl leading-8 max-w-[72%]">
+    <div className="bg-gradient-to-b from-0% to-100% from-pluto-dark-blue to-pluto-deep-blue">
+      <MaxWidth className="space-y-8 py-16 text-white tablet:py-24 tablet:space-y-24">
+        <div className="text-2xl font-medium tablet:text-5xl max-w-[72%]">
           What kind of changes are we trying to bring about based on this tool?
         </div>
         <div className="space-y-8">
@@ -51,7 +51,7 @@ const ChangeToBring: FC = () => {
           </div>
         </div>
       </MaxWidth>
-    </PaddingDiv>
+    </div>
   );
 };
 

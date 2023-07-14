@@ -36,8 +36,8 @@ const Cards: FC = () => {
 
 const HomeSection5: FC = () => {
   return (
-    <PaddingDiv className="py-16 bg-white">
-      <MaxWidth className="space-y-14">
+    <div className="bg-white">
+      <MaxWidth className="space-y-14 py-16">
         <div className="space-y-2">
           <div className="font-extrabold text-3xl">Our Partners</div>
           <div className="text-lg tablet:text-2xl">
@@ -48,7 +48,7 @@ const HomeSection5: FC = () => {
         <OurPartners />
         <Cards />
       </MaxWidth>
-    </PaddingDiv>
+    </div>
   );
 };
 

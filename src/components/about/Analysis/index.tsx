@@ -19,33 +19,31 @@ const Item: FC<Props> = ({ icon, text }) => {
 
 const Analysis: FC = () => {
   return (
-    <PaddingDiv className="py-16 tablet:py-24">
-      <MaxWidth className="space-y-20">
-        <div className="text-2xl tablet:text-4xl leading-[1.3]">
-          Through analysis, as the visibility of research-related information
-          increases,{" "}
-          <b>
-            it is expected to enable anyone to easily obtain research
-            information in any field.
-          </b>{" "}
-          Accordingly, the following are expected to be possible:
-        </div>
-        <div className="space-y-14 tablet:space-y-0 tablet:grid tablet:grid-cols-3 tablet:gap-x-7">
-          <Item
-            icon={<Shield className="w-6" />}
-            text="Verification of scientific information in the media."
-          />
-          <Item
-            icon={<Search className="w-6" />}
-            text="Tracking the flow of national research project funds."
-          />
-          <Item
-            icon={<FilePlus className="w-6" />}
-            text="Analysis of differences in research methods by country."
-          />
-        </div>
-      </MaxWidth>
-    </PaddingDiv>
+    <MaxWidth className="space-y-20 py-16 tablet:py-24">
+      <div className="text-2xl tablet:text-4xl leading-[1.3]">
+        Through analysis, as the visibility of research-related information
+        increases,{" "}
+        <b>
+          it is expected to enable anyone to easily obtain research information
+          in any field.
+        </b>{" "}
+        Accordingly, the following are expected to be possible:
+      </div>
+      <div className="space-y-14 tablet:space-y-0 tablet:grid tablet:grid-cols-3 tablet:gap-x-7">
+        <Item
+          icon={<Shield className="w-6" />}
+          text="Verification of scientific information in the media."
+        />
+        <Item
+          icon={<Search className="w-6" />}
+          text="Tracking the flow of national research project funds."
+        />
+        <Item
+          icon={<FilePlus className="w-6" />}
+          text="Analysis of differences in research methods by country."
+        />
+      </div>
+    </MaxWidth>
   );
 };
 
