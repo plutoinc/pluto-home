@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        loop: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        loop: "loop 20s linear infinite",
+      },
       colors: {
         "pluto-deep-blue": "#022D6B",
         "pluto-dark-blue": "#054EB7",

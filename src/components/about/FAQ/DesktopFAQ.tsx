@@ -14,7 +14,7 @@ const Question: FC<QuestionProps> = ({ question, isSelected, onClickItem }) => {
       className={twMerge(
         "text-lg py-4 px-5 rounded-xl bg w-full inline-block text-left",
         isSelected
-          ? "text-black border font-semibold border-pluto-blue"
+          ? "bg-white text-black border font-semibold border-pluto-blue"
           : "bg-[#E4EFFB] text-[#596576]"
       )}
       onClick={onClickItem}

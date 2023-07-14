@@ -8,13 +8,9 @@ import {
   SNU,
 } from "./Image";
 
-interface Props {}
-
-const OurPartners: FC<Props> = () => {
-  // Loop later
-
+const Partner: FC = () => {
   return (
-    <ul className="flex items-center gap-x-16 p-2.5 overflow-x-hidden h-24">
+    <ul className="flex items-center gap-x-16 p-2.5 h-24 animate-loop">
       <SNU />
       <ICHMET2020 />
       <POSTECH />
@@ -22,6 +18,15 @@ const OurPartners: FC<Props> = () => {
       <Posco />
       <NatureConference />
     </ul>
+  );
+};
+
+const OurPartners: FC = () => {
+  return (
+    <div className="flex overflow-x-hidden gap-x-16">
+      <Partner />
+      <Partner />
+    </div>
   );
 };
 
