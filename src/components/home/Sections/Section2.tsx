@@ -11,7 +11,7 @@ const ImageWrapper: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({
   ...props
 }) => {
   return (
-    <div className="w-[150px]" {...props}>
+    <div className="w-[150px] p-4 flex justify-center items-center" {...props}>
       {children}
     </div>
   );
@@ -25,7 +25,7 @@ const LinkWrapper: FC<
       target="_blank"
       {...props}
       className={twMerge(
-        "bg-pluto-deep-blue text-white rounded-lg p-2 w-full h-20 flex items-center justify-center hover:scale-110 transition-transform duration-200",
+        "bg-pluto-deep-blue text-white rounded-lg w-full h-20 flex items-center justify-center hover:scale-110 transition-transform duration-200",
         className
       )}
     >
