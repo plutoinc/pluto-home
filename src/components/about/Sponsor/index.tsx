@@ -1,6 +1,15 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
+import {
+  BeHighInvestment,
+  BluePoint,
+  HGI,
+  Hashed,
+  JBFinancialGroup,
+  PoscoCapital,
+  SeoulIP,
+} from "./Image";
 
 interface Props {}
 
@@ -11,7 +20,15 @@ const Sponsor: FC<Props> = () => {
         <div className="text-3xl font-bold tablet:font-extrabold">
           Backed by
         </div>
-        <div>포스코 캐피탈 등등</div>
+        <ul className="flex items-center overflow-x-hidden gap-x-16 p-2.5">
+          <HGI />
+          <PoscoCapital />
+          <JBFinancialGroup />
+          <SeoulIP />
+          <BeHighInvestment />
+          <Hashed />
+          <BluePoint />
+        </ul>
       </MaxWidth>
     </PaddingDiv>
   );

@@ -3,7 +3,7 @@ import PaddingDiv from "@/components/common/PaddingDiv";
 import Image from "next/image";
 import { FC } from "react";
 import ContactUsButton from "../ContactUsButton";
-import OurPartners from "../PartnerImages";
+import OurPartners from "../Partners";
 
 const Cards: FC = () => {
   return (
