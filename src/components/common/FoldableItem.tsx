@@ -5,13 +5,14 @@ import { twMerge } from "tailwind-merge";
 interface Props {
   title: string;
   content: string[] | string;
+  className?: string;
 }
 
-const FoldableItem: FC<Props> = ({ title, content }) => {
+const FoldableItem: FC<Props> = ({ title, content, className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="py-4">
+    <div className={twMerge("py-4", className)}>
       <button
         className="w-full flex items-center text-left leading-[1.5] font-bold text-lg justify-between gap-x-4"
         onClick={() => setIsOpen((isOpen) => !isOpen)}
