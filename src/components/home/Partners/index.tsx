@@ -23,7 +23,7 @@ const Partner: FC = () => {
 
 const OurPartners: FC = () => {
   return (
-    <div className="flex overflow-x-hidden gap-x-16">
+    <div className="flex overflow-hidden gap-x-16">
       <Partner />
       <Partner />
     </div>

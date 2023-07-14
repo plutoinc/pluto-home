@@ -6,11 +6,14 @@ import HomeSection3 from "@/components/home/Sections/Section3";
 import HomeSection4 from "@/components/home/Sections/Section4";
 import HomeSection5 from "@/components/home/Sections/Section5";
 import HomeSection6 from "@/components/home/Sections/Section6";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
-      <title>PlutoLabs</title>
+      <Head>
+        <title>PlutoLabs</title>
+      </Head>
       <div className="text-black bg-gradient-to-b from-[#f4f9ff] from-0% to-[#f4f9ff] to-100%">
         <HomeHero />
         <HomeSection1 />

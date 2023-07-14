@@ -8,10 +8,14 @@ import { LOGOS } from "./constant";
 
 const ImageWrapper: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({
   children,
+  className,
   ...props
 }) => {
   return (
-    <div className="w-[150px] p-4 flex justify-center items-center" {...props}>
+    <div
+      {...props}
+      className={twMerge("flex justify-center items-center", className)}
+    >
       {children}
     </div>
   );
@@ -25,7 +29,7 @@ const LinkWrapper: FC<
       target="_blank"
       {...props}
       className={twMerge(
-        "bg-pluto-deep-blue text-white rounded-lg w-full h-20 flex items-center justify-center hover:scale-110 transition-transform duration-200",
+        "bg-pluto-deep-blue text-white rounded-lg w-full h-20 flex items-center justify-center tablet:hover:scale-110 transition-transform duration-200",
         className
       )}
     >
@@ -55,7 +59,7 @@ const HomeSection2: FC = () => {
       <div className="space-y-8 desktop:space-y-0 desktop:flex desktop:gap-x-8">
         {LOGOS.map((logo) => (
           <LinkWrapper key={logo.href} href={logo.href}>
-            <ImageWrapper>
+            <ImageWrapper className={logo.className}>
               <Image src={logo.src} alt={logo.alt} width={1000} height={1000} />
             </ImageWrapper>
           </LinkWrapper>

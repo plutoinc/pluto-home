@@ -36,7 +36,7 @@ const Header: FC = () => {
 
   useEffect(() => {
     const closeMenuState = () => {
-      setIsMobileMenuOpen((prev) => !prev);
+      setIsMobileMenuOpen(false);
     };
     router.events.on("routeChangeComplete", closeMenuState);
 
