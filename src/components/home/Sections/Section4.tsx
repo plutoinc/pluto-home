@@ -2,6 +2,8 @@ import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
 import FoldableItem from "@/components/common/FoldableItem";
 import MaxWidth from "@/components/common/MaxWidth";
+import Link from "next/link";
+import { PRODUCT_PATH } from "@/routes";
 
 const FEATURES = [
   {
@@ -44,9 +46,12 @@ const HomeSection4: FC = () => {
           <div className="text-3xl font-extrabold">
             Experience true research with us
           </div>
-          <button className="w-full text-sm font-bold text-white p-3.5 bg-pluto-deep-blue rounded-lg shadow-sm">
+          <Link
+            href={PRODUCT_PATH}
+            className="w-full text-sm font-bold text-white p-3.5 bg-pluto-deep-blue rounded-lg shadow-sm block text-center"
+          >
             Discover more
-          </button>
+          </Link>
         </div>
         <div className="divide-y divide-blue-200 w-full">
           {FEATURES.map(({ title, content }, index) => (

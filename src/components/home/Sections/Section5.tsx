@@ -2,6 +2,8 @@ import MaxWidth from "@/components/common/MaxWidth";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import Image from "next/image";
 import { FC } from "react";
+import ContactUsButton from "../ContactUsButton";
+import OurPartners from "../PartnerImages";
 
 const Cards: FC = () => {
   return (
@@ -17,9 +19,7 @@ const Cards: FC = () => {
           Not just a simple search engine. Intelligent data and quick access to
           state-of-the-art insights.
         </div>
-        <button className="bg-white text-black font-bold w-full rounded-lg shadow p-3.5 text-sm tablet:w-fit">
-          Contact us
-        </button>
+        <ContactUsButton className="bg-white text-black" />
       </div>
       <div className="tablet:w-[556px] h-[389px] tablet:translate-x-1/4 relative overflow-hidden rounded-3xl bg-white w-full">
         <Image
@@ -36,7 +36,7 @@ const Cards: FC = () => {
 
 const HomeSection5: FC = () => {
   return (
-    <PaddingDiv className="py-16">
+    <PaddingDiv className="py-16 bg-white">
       <MaxWidth className="space-y-14">
         <div className="space-y-2">
           <div className="font-extrabold text-3xl">Our Partners</div>
@@ -45,7 +45,7 @@ const HomeSection5: FC = () => {
             research with Pluto
           </div>
         </div>
-        <div>(대학교들)</div>
+        <OurPartners />
         <Cards />
       </MaxWidth>
     </PaddingDiv>

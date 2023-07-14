@@ -2,6 +2,7 @@ import MaxWidth from "@/components/common/MaxWidth";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import Image from "next/image";
 import { FC } from "react";
+import ContactUsButton from "../ContactUsButton";
 
 interface Props {}
 
@@ -25,9 +26,7 @@ const HomeSection6: FC<Props> = () => {
             </li>
           </ul>
         </div>
-        <button className="bg-pluto-dark-blue text-white font-bold w-full rounded-lg shadow px-4 text-sm tablet:w-fit h-10 ">
-          Contact us
-        </button>
+        <ContactUsButton />
         <div className="bg-white p-4 rounded-2xl">
           <Image
             src="https://framerusercontent.com/images/QVj9dPhzO00WJfHuL8S3OIBlI.png"

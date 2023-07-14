@@ -5,7 +5,7 @@ import ScrollButton from "../ScrollButton";
 
 const HomeHero: FC = () => {
   return (
-    <PaddingDiv className="py-16 tablet:py-48 h-[800px]">
+    <PaddingDiv className="py-16 tablet:py-48 h-[800px] flex tablet:items-center">
       <MaxWidth className="space-y-12">
         <div className="break-words font-extrabold text-3xl tablet:text-5xl">
           <div>Innovate</div>

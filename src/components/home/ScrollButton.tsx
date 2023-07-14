@@ -8,15 +8,15 @@ interface Props {
 
 const ScrollButton: FC<Props> = ({ className }) => {
   return (
-    <button
+    <div
       className={twMerge(
-        "flex items-center gap-x-2.5 text-[#709edb]",
+        "flex items-center gap-x-2.5 text-[#709edb] text-sm",
         className
       )}
     >
-      <ArrowDownCircle className="w-6" />
+      <ArrowDownCircle className="w-6 animate-bounce" />
       <div>Scroll to discover</div>
-    </button>
+    </div>
   );
 };
 
