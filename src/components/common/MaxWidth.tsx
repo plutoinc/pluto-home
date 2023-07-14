@@ -9,8 +9,8 @@ const MaxWidth: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({
 }) => {
   return (
     <PaddingDiv
-      className={twMerge("max-w-[1200px] mx-auto w-full", className)}
       {...props}
+      className={twMerge("max-w-[1200px] mx-auto w-full", className)}
     >
       {children}
     </PaddingDiv>

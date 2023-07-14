@@ -20,7 +20,7 @@ const Item: FC<Props> = ({ icon, text }) => {
 const Analysis: FC = () => {
   return (
     <MaxWidth className="space-y-20 py-16 tablet:py-24">
-      <div className="text-2xl tablet:text-4xl leading-[1.3]">
+      <div className="text-2xl tablet:text-4xl !leading-[1.5] desktop:text-5xl">
         Through analysis, as the visibility of research-related information
         increases,{" "}
         <b>

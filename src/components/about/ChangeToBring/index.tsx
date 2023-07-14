@@ -21,7 +21,7 @@ const ChangeToBring: FC = () => {
   return (
     <div className="bg-gradient-to-b from-0% to-100% from-pluto-dark-blue to-pluto-deep-blue">
       <MaxWidth className="space-y-8 py-16 text-white tablet:py-24 tablet:space-y-24">
-        <div className="text-2xl font-medium tablet:text-5xl max-w-[72%]">
+        <div className="text-2xl font-medium tablet:text-5xl max-w-[72%] !leading-[1.3]">
           What kind of changes are we trying to bring about based on this tool?
         </div>
         <div className="space-y-8">
