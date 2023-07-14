@@ -9,11 +9,31 @@ const FEATURES = [
     content:
       "Our technology makes it easy for you to understand current research issues and the development status of each technology.",
   },
-  { title: "Discover new experts", content: "" },
-  { title: "Understand funding patterns", content: "" },
-  { title: "Compare research capabilities", content: "" },
-  { title: "Measure research impact", content: "" },
-  { title: "Stay ahead of the curve", content: "" },
+  {
+    title: "Discover new experts",
+    content:
+      "We help you find leading researchers in your field by identifying their research interests, influential power, and professional networks.",
+  },
+  {
+    title: "Understand funding patterns",
+    content:
+      "Our tool tracks the flow of funds for each research topic, giving you insights into where funding is going and why.",
+  },
+  {
+    title: "Compare research capabilities",
+    content:
+      "We provide a comprehensive platform for comparing research capabilities across countries, institutions, and individual researchers.",
+  },
+  {
+    title: "Measure research impact",
+    content:
+      "Our technology allows you to measure the impact of research outputs and individual researchers, giving you a clear understanding of their influence within the field.",
+  },
+  {
+    title: "Stay ahead of the curve",
+    content:
+      "We use advanced algorithms to sense rising research topics and up-and-coming scientists, keeping you ahead of the curve.",
+  },
 ];
 
 const HomeSection4: FC = () => {
