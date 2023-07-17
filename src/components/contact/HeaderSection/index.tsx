@@ -1,3 +1,4 @@
+import { DEFAULT_DURATION } from "@/components/common/Animation/constant";
 import { useSequenceAnimation } from "@/components/hooks/useSequenceAnimation";
 import { FC, useEffect, useRef } from "react";
 
@@ -13,8 +14,12 @@ const HeaderSection: FC<Props> = () => {
   useEffect(() => {
     animate([
       { ref: titleRef },
-      { ref: connectRef, withNav: true, option: { at: 0.5 } },
-      { ref: descriptionRef, withNav: true, option: { at: 0.5 } },
+      { ref: connectRef, withNav: true, option: { at: DEFAULT_DURATION } },
+      {
+        ref: descriptionRef,
+        withNav: true,
+        option: { at: DEFAULT_DURATION },
+      },
     ]);
   });
 

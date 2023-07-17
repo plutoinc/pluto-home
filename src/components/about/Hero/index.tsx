@@ -1,3 +1,4 @@
+import { DEFAULT_DURATION } from "@/components/common/Animation/constant";
 import MaxWidth from "@/components/common/MaxWidth";
 import ScrollToDiscover from "@/components/common/ScrollToDiscover";
 import { useSequenceAnimation } from "@/components/hooks/useSequenceAnimation";
@@ -16,8 +17,8 @@ const AboutHero: FC<Props> = () => {
   useEffect(() => {
     animate([
       { ref: titleRef },
-      { ref: descriptionRef, withNav: true, option: { at: 0.5 } },
-      { ref: aboutUsRef, withNav: true, option: { at: 0.5 } },
+      { ref: descriptionRef, withNav: true, option: { at: DEFAULT_DURATION } },
+      { ref: aboutUsRef, withNav: true, option: { at: DEFAULT_DURATION } },
       { ref: scrollToDiscoverRef },
     ]);
   }, [animate]);
