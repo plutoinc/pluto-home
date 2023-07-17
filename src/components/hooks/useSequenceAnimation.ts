@@ -28,7 +28,7 @@ export const useSequenceAnimation = (options?: SequenceOptions) => {
         ({ ref, withNav, option }) => [
           withNav ? [ref.current, "nav"] : [ref.current],
           { y: [50, 0], opacity: [0, 1] },
-          { duration: 0.5, ...option },
+          { duration: 0.3, ...option },
         ]
       );
 
