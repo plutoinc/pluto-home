@@ -1,6 +1,6 @@
 import PaddingDiv from "@/components/common/PaddingDiv";
 import PublicationStatsIcon from "@/components/icons/PublicationsStatIcon";
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef } from "react";
 import StatCard from "./StatCard";
 import CountryStatIcon from "@/components/icons/CountryStatIcon";
 import UserStatIcon from "@/components/icons/UserStatIcon";
@@ -9,9 +9,7 @@ import { useSequenceAnimation } from "@/components/hooks/useSequenceAnimation";
 interface Props {}
 
 const StatsSection: FC<Props> = () => {
-  const [isAnimated, setIsAnimated] = useState(false);
-
-  const sequenceAnimate = useSequenceAnimation({ repeat: 0 });
+  const sequenceAnimate = useSequenceAnimation();
 
   const wrapperRef = useRef(null);
 
@@ -28,22 +26,17 @@ const StatsSection: FC<Props> = () => {
             { ref: publicationsRef },
             { ref: usersRef },
           ]);
-          setIsAnimated(true);
         }
       },
       { rootMargin: "400px", threshold: 1 }
     );
-
-    if (isAnimated) {
-      return;
-    }
 
     if (wrapperRef.current) {
       observer.observe(wrapperRef.current);
     }
 
     return () => observer.disconnect();
-  }, [isAnimated, sequenceAnimate]);
+  }, [sequenceAnimate]);
 
   return (
     <div className="bg-[#f4f9ff] mx-auto" ref={wrapperRef}>
