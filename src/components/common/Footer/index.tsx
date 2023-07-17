@@ -5,6 +5,7 @@ import MediumLogoIcon from "../../icons/MediumLogoIcon";
 import PlutoLogoIcon from "../../icons/PlutoLogoIcon";
 import ScinapseLogoIcon from "../../icons/ScinapseLogoIcon";
 import TwitterIcon from "../../icons/TwitterIcon";
+import { HOME_PATH } from "@/routes";
 
 interface Props {}
 
@@ -31,7 +32,7 @@ const Footer: FC<Props> = () => {
             </Link>
           </div>
 
-          <Link href={{ pathname: "/" }}>
+          <Link href={{ pathname: HOME_PATH }}>
             <PlutoLogoIcon color="white" className="w-20" />
           </Link>
         </div>

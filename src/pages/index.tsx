@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>PlutoLabs</title>
+        <title>Pluto Labs</title>
       </Head>
       <Header />
       <div className="text-black bg-gradient-to-b from-[#f4f9ff] from-0% to-[#f4f9ff] to-100%">

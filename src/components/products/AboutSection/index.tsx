@@ -1,7 +1,8 @@
 import PaddingDiv from "@/components/common/PaddingDiv";
+import { ABOUT_PATH } from "@/routes";
 import Link from "next/link";
 import { FC } from "react";
-import AboutDropdown from "./AboutDropdown";
+import Disclosure from "../../common/Disclosure";
 
 interface Props {}
 
@@ -15,7 +16,7 @@ const AboutSection: FC<Props> = () => {
           </div>
 
           <Link
-            href={{ pathname: "/about" }}
+            href={{ pathname: ABOUT_PATH }}
             className="px-4 py-2.5 inline-block bg-black rounded-lg text-white text-sm font-bold shadow-gray-300 shadow-lg"
           >
             About us
@@ -23,7 +24,8 @@ const AboutSection: FC<Props> = () => {
         </div>
 
         <div className="flex-1">
-          <AboutDropdown
+          <Disclosure
+            type="list"
             title="Gain new insight"
             descriptions={[
               "Research funding trends and relevant information.",
@@ -33,7 +35,8 @@ const AboutSection: FC<Props> = () => {
             ]}
           />
 
-          <AboutDropdown
+          <Disclosure
+            type="list"
             title="Cutting-edge research trends"
             description="Get quick access to the latest research trends we identify:"
             descriptions={[
@@ -43,7 +46,8 @@ const AboutSection: FC<Props> = () => {
             ]}
           />
 
-          <AboutDropdown
+          <Disclosure
+            type="list"
             title="Multi-dimensional analysis of researchers & publications"
             description="Author's contribution-weighted research field, impact in their research field, and yearly achievement tracking."
             descriptions={[

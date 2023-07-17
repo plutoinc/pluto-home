@@ -7,6 +7,7 @@ import MaxWidth from "../MaxWidth";
 import HeaderRightMenu from "./Menu";
 import HeaderToggle from "./Menu/Toggle";
 import { HeaderMenu } from "./constant";
+import { HOME_PATH } from "@/routes";
 
 const HeaderMenu: FC<HeaderMenu> = ({ href, label }) => {
   return (
@@ -38,7 +39,9 @@ const Header: FC = () => {
         )}
       >
         <div className="flex items-center justify-between w-full">
-          <PlutoLogoIcon color="blue" className="w-20" />
+          <Link href={{ pathname: HOME_PATH }}>
+            <PlutoLogoIcon color="blue" className="w-24" />
+          </Link>
           <HeaderToggle
             isOpen={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
