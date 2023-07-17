@@ -1,9 +1,8 @@
-import PaddingDiv from "@/components/common/PaddingDiv";
-import { FC } from "react";
-import FoldableItem from "@/components/home/FoldableItem";
 import MaxWidth from "@/components/common/MaxWidth";
-import Link from "next/link";
+import FoldableItem from "@/components/home/FoldableItem";
 import { PRODUCT_PATH } from "@/routes";
+import Link from "next/link";
+import { FC } from "react";
 import { FEATURES } from "./constant";
 
 const HomeSection4: FC = () => {

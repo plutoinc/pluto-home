@@ -1,5 +1,4 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import PaddingDiv from "@/components/common/PaddingDiv";
 import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { FC, HTMLAttributes, PropsWithChildren } from "react";

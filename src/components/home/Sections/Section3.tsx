@@ -1,5 +1,4 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
 
 interface Props {}

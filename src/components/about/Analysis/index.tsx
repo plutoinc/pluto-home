@@ -1,7 +1,6 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC, ReactNode } from "react";
-import { Search, Shield, FilePlus } from "react-feather";
+import { FilePlus, Search, Shield } from "react-feather";
 
 interface Props {
   icon: ReactNode;

@@ -1,11 +1,10 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
 import {
   BeHighInvestment,
   BluePoint,
-  HGI,
   Hashed,
+  HGI,
   JBFinancialGroup,
   PoscoCapital,
   SeoulIP,
