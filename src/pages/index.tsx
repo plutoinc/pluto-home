@@ -7,29 +7,32 @@ import HomeSection4 from "@/components/home/Sections/Section4";
 import HomeSection5 from "@/components/home/Sections/Section5";
 import HomeSection6 from "@/components/home/Sections/Section6";
 import Head from "next/head";
-import { motion, useAnimate } from "framer-motion";
-import { FC, PropsWithChildren, useEffect } from "react";
+import { motion } from "framer-motion";
+import { FC, PropsWithChildren } from "react";
 
 export const Motion: FC<PropsWithChildren<{ className?: string }>> = ({
   children,
   className,
 }) => {
-  const [scope, animate] = useAnimate();
+  // const [scope, animate] = useAnimate();
 
-  useEffect(() => {
-    const animation = async () => {
-      await animate(scope.current, { opacity: 0, marginTop: 100 });
-      await animate(scope.current, { opacity: 1, marginTop: 0 });
-    };
+  // useEffect(() => {
+  //   const animation = async () => {
+  //     await animate(scope.current, {
+  //       opacity: 0,
+  //       marginTop: 100,
+  //     });
+  //     animate(scope.current, { opacity: 100, marginTop: 0 });
+  //   };
 
-    animation();
-  }, [animate, scope]);
+  //   animation();
+  // }, [animate, scope]);
 
-  return (
-    <div ref={scope} className={className}>
-      {children}
-    </div>
-  );
+  // return (
+  //   <div ref={scope} className={className}>
+  //     {children}
+  //   </div>
+  // );
 
   return (
     <motion.div
@@ -37,6 +40,7 @@ export const Motion: FC<PropsWithChildren<{ className?: string }>> = ({
       whileInView={{ opacity: 1, marginTop: 0 }}
       viewport={{ once: true }}
       className={className}
+      transition={{ delay: 0.4 }}
     >
       {children}
     </motion.div>
