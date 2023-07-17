@@ -20,7 +20,7 @@ const HomeHero: FC = () => {
         </div>
         <ScrollToDiscover />
       </MaxWidth>
-      <div className="absolute -bottom-1/3 flex justify-center -left-1/2 -right-1/2 tablet:top-0 tablet:left-1/2 desktop:left-1/4">
+      <div className="absolute -bottom-[40%] flex justify-center -left-1/2 -right-1/2 tablet:top-0 tablet:left-1/2 desktop:left-1/4">
         <Lottie
           animationData={lottieData}
           loop
