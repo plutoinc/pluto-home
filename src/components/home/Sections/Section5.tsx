@@ -3,12 +3,13 @@ import Image from "next/image";
 import { FC } from "react";
 import ContactUsButton from "../ContactUsButton";
 import OurPartners from "../Partners";
+import ScinapseIcon from "@/components/icons/ScinapseIcon";
 
 const Cards: FC = () => {
   return (
     <div className="tablet:h-[500px] h-[850px] p-12 flex tablet:gap-y-0 gap-y-10 tablet:flex-row flex-col overflow-hidden items-center relative tablet:gap-x-8 bg-pluto-deep-blue rounded-3xl text-white tablet:items-center">
       <div className="tablet:w-2/5 space-y-8">
-        <div className="text-3xl">Scinapse</div>
+        <ScinapseIcon className="w-36" />
         <div className="font-extrabold text-3xl">
           Designed for
           <br />

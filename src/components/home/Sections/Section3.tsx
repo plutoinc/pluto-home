@@ -15,7 +15,7 @@ const HomeSection3: FC<Props> = () => {
             Our tool extracts valuable information such as related topics,
             companies, and patent data from each paper.
           </span>{" "}
-          <span className="leading-[1.5]">
+          <span className="leading-[1.5] text-white text-opacity-80">
             Through our database, we provide a more comprehensive research
             experience.
           </span>

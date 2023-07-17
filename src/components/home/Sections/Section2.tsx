@@ -42,17 +42,17 @@ const HomeSection2: FC = () => {
     <MaxWidth className="text-2xl tablet:text-3xl py-24 tablet:py-48 desktop:text-5xl space-y-12">
       <div className="leading-[1.5]">
         <span className="tablet:font-bold tablet:text-[#3270CD]">
-          We solve the challenge of overwhelming amounts of research papers,
+          We solve the challenge of overwhelming amounts of research papers
         </span>
-        difficulties in finding gaps and generating innovative ideas, and
+        , difficulties in finding gaps and generating innovative ideas, and
         staying up-to-date with the latest developments{" "}
         <span className="tablet:font-bold tablet:text-[#3270CD]">
           by providing valuable insights through aggregating and analyzing
-          academic papers{" "}
+          academic papers
         </span>
         , instead of a mere search and listing service.
       </div>
-      <div className="leading-[2]">
+      <div className="leading-[1.5]">
         Scientists have observed a deceleration in scientific progress
       </div>
       <div className="space-y-8 desktop:space-y-0 desktop:flex desktop:gap-x-8">
