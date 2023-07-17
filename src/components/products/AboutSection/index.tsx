@@ -1,8 +1,7 @@
-import ChevronUpIcon from "@/components/icons/ChevronUpIcon";
 import PaddingDiv from "@/components/common/PaddingDiv";
+import Link from "next/link";
 import { FC } from "react";
 import AboutDropdown from "./AboutDropdown";
-import Link from "next/link";
 
 interface Props {}
 

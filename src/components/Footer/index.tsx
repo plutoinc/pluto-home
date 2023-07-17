@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC } from "react";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import MediumLogoIcon from "../icons/MediumLogoIcon";
@@ -9,23 +10,38 @@ interface Props {}
 
 const Footer: FC<Props> = () => {
   return (
-    <div className="p-8 bg-pluto-deep-blue space-y-8 tablet:px-24 tablet:py-12">
-      <div className="flex flex-col items-center space-y-8 tablet:flex-row tablet:justify-between tablet:space-y-0 tablet:items-center">
-        <div className="flex items-centers gap-x-6">
-          <TwitterIcon className="w-8" />
-          <LinkedInIcon className="w-8" />
-          <MediumLogoIcon className="w-8" />
-          <ScinapseLogoIcon className="w-8" />
+    <div className="bg-pluto-deep-blue">
+      <div className="max-w-7xl mx-auto tablet:px-24 tablet:py-12 space-y-8 p-8">
+        <div className="flex flex-col items-center space-y-8 tablet:flex-row tablet:justify-between tablet:space-y-0 tablet:items-center">
+          <div className="flex items-centers gap-x-6">
+            <Link href="https://twitter.com/pluto_corp" target="_blank">
+              <TwitterIcon className="w-8" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/pluto-network/"
+              target="_blank"
+            >
+              <LinkedInIcon className="w-8" />
+            </Link>
+            <Link href="https://medium.com/pluto-inc" target="_blank">
+              <MediumLogoIcon className="w-8" />
+            </Link>
+            <Link href="https://www.scinapse.io/" target="_blank">
+              <ScinapseLogoIcon className="w-8" />
+            </Link>
+          </div>
+
+          <Link href={{ pathname: "/" }}>
+            <PlutoLogoIcon className="w-20" />
+          </Link>
         </div>
 
-        <PlutoLogoIcon className="w-20" />
-      </div>
+        <div className="h-[1px] bg-[#113769]" />
 
-      <div className="h-[1px] bg-[#113769]" />
-
-      <div className="text-sm text-[#b4caea] text-center space-y-6 tablet:flex tablet:items-center tablet:space-y-0 tablet:justify-between">
-        <div>© 2023 Pluto Labs, Inc. All rights reserved.</div>
-        <div>support@pluto.im</div>
+        <div className="text-sm text-[#b4caea] text-center space-y-6 tablet:flex tablet:items-center tablet:space-y-0 tablet:justify-between">
+          <div>© 2023 Pluto Labs, Inc. All rights reserved.</div>
+          <div>support@pluto.im</div>
+        </div>
       </div>
     </div>
   );

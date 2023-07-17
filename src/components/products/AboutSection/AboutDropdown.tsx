@@ -14,13 +14,13 @@ const AboutDropdown: FC<Props> = ({ title, description, descriptions }) => {
   return (
     <div>
       <div
-        className="flex cursor-pointer py-6"
+        className="flex justify-between cursor-pointer py-6"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <div className="text-xl font-semibold flex-1">{title}</div>
         <ChevronUpIcon
           className={twMerge(
-            "w-6 transition-transform rotate-180",
+            "w-6 h-6 transition-transform rotate-180",
             isOpen && "rotate-0"
           )}
         />
@@ -28,8 +28,8 @@ const AboutDropdown: FC<Props> = ({ title, description, descriptions }) => {
 
       <div
         className={twMerge(
-          "font-medium text-[#666666] leading-7 h-full overflow-hidden transition-all",
-          isOpen ? "max-h-[400px]" : "max-h-0"
+          "font-medium text-[#666666] leading-7 h-full duration-300 overflow-hidden transition-all",
+          isOpen ? "max-h-[400px] mb-6" : "max-h-0"
         )}
       >
         {description && <div>{description}</div>}

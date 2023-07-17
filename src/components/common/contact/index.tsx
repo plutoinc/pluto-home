@@ -7,7 +7,7 @@ interface Props {}
 
 const Contact: FC<Props> = () => {
   return (
-    <div className="bg-gradient-to-b from-pluto-deep-blue to-blue-100">
+    <div className="bg-gradient-to-b flex-1 from-pluto-deep-blue to-blue-100">
       <div className="max-w-7xl mx-auto">
         <PaddingDiv className="tablet:flex tablet:gap-x-16 tablet:space-y-0 space-y-16 py-16 tablet:py-24">
           <HeaderSection />

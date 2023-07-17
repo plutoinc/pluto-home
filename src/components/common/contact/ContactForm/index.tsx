@@ -76,7 +76,7 @@ const ContactForm: FC<Props> = () => {
   );
 
   return (
-    <div className="flex-1 min-w-[384px]">
+    <div className="flex-1 tablet:min-w-[384px]">
       <form onSubmit={submit} className="flex flex-col gap-y-3">
         <Input
           label="Name"
