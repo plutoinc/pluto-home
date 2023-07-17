@@ -31,7 +31,7 @@ const Header: FC = () => {
   }, [router.events]);
 
   return (
-    <div className="sticky top-0 bg-white z-50">
+    <nav className="sticky z-50 block">
       <MaxWidth
         className={twMerge(
           "py-6 px-6 gap-12 flex items-center tablet:h-20",
@@ -49,7 +49,7 @@ const Header: FC = () => {
         </div>
         <HeaderRightMenu isOpen={isMobileMenuOpen} />
       </MaxWidth>
-    </div>
+    </nav>
   );
 };
 

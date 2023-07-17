@@ -3,7 +3,7 @@ import { FC } from "react";
 
 export const SNU: FC = () => {
   return (
-    <li className="w-16 flex-shrink-0">
+    <li className="w-16 flex-shrink-0 hover:scale-110 transition-transform">
       <Image
         width={1000}
         height={1000}
@@ -16,7 +16,7 @@ export const SNU: FC = () => {
 
 export const ICHMET2020: FC = () => {
   return (
-    <li className="w-48 flex-shrink-0">
+    <li className="w-48 flex-shrink-0 hover:scale-110 transition-transform">
       <Image
         width={1000}
         height={1000}
@@ -29,7 +29,7 @@ export const ICHMET2020: FC = () => {
 
 export const POSTECH: FC = () => {
   return (
-    <li className="w-80 flex-shrink-0">
+    <li className="w-80 flex-shrink-0 hover:scale-110 transition-transform">
       <Image
         width={1000}
         height={1000}
@@ -42,7 +42,7 @@ export const POSTECH: FC = () => {
 
 export const KoreaUniversity: FC = () => {
   return (
-    <li className="w-12 flex-shrink-0">
+    <li className="w-12 flex-shrink-0 hover:scale-110 transition-transform">
       <Image
         width={1000}
         height={1000}
@@ -55,7 +55,7 @@ export const KoreaUniversity: FC = () => {
 
 export const Posco: FC = () => {
   return (
-    <li className="w-32 flex-shrink-0">
+    <li className="w-32 flex-shrink-0 hover:scale-110 transition-transform">
       <Image
         width={1000}
         height={1000}
@@ -68,7 +68,7 @@ export const Posco: FC = () => {
 
 export const NatureConference: FC = () => {
   return (
-    <li className="w-80 flex-shrink-0">
+    <li className="w-80 flex-shrink-0 hover:scale-110 transition-transform">
       <Image
         width={1000}
         height={1000}
