@@ -8,7 +8,6 @@ const HomeHero: FC = () => {
   return (
     <div className="h-[800px] relative flex tablet:items-center w-full overflow-hidden">
       <MaxWidth className="space-y-12 py-16 tablet:py-48 min-h-0">
-        {/* 아래가 relative? */}
         <div className="break-words font-extrabold text-3xl tablet:text-5xl">
           <div>Innovate</div>
           <div>Innovations</div>
