@@ -2,6 +2,7 @@ import ChevronUpIcon from "@/components/icons/ChevronUpIcon";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
 import AboutDropdown from "./AboutDropdown";
+import Link from "next/link";
 
 interface Props {}
 
@@ -14,9 +15,12 @@ const AboutSection: FC<Props> = () => {
             Unlock powerful insights with our technology
           </div>
 
-          <button className="px-4 py-2.5 bg-black rounded-lg text-white text-sm font-bold shadow-gray-300 shadow-lg">
+          <Link
+            href={{ pathname: "/about" }}
+            className="px-4 py-2.5 inline-block bg-black rounded-lg text-white text-sm font-bold shadow-gray-300 shadow-lg"
+          >
             About us
-          </button>
+          </Link>
         </div>
 
         <div className="flex-1">

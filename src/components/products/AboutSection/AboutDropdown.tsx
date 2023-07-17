@@ -28,7 +28,7 @@ const AboutDropdown: FC<Props> = ({ title, description, descriptions }) => {
 
       <div
         className={twMerge(
-          "font-medium text-[#666666] leading-7 mb-6 h-full overflow-hidden transition-all",
+          "font-medium text-[#666666] leading-7 h-full overflow-hidden transition-all",
           isOpen ? "max-h-[400px]" : "max-h-0"
         )}
       >

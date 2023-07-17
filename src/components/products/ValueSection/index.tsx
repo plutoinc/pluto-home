@@ -12,7 +12,7 @@ interface Props {}
 const ValueSection: FC<Props> = () => {
   return (
     <PaddingDiv className="flex flex-col items-center py-8 tablet:max-w-7xl mx-auto space-y-8 tablet:space-y-12 desktop:space-y-8 tablet:py-24">
-      <div className="flex max-w-full gap-x-4 items-stretch overflow-x-scroll snap-x">
+      <div className="flex max-w-full py-4 gap-x-4 items-stretch overflow-x-auto snap-x">
         <ValueCard
           icon={<PapersIcon />}
           title="Easy literature review"

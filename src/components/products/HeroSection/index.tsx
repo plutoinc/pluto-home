@@ -33,7 +33,8 @@ const HeroSection: FC<Props> = () => {
             "block bg-white w-full font-bold rounded-lg text-center py-4 text-pluto-deep-blue text-lg tablet:text-xl shadow-xl px-10",
             "tablet:inline-block tablet:w-fit"
           )}
-          href=""
+          target="_blank"
+          href="https://www.scinapse.io/"
         >
           Try Now
         </Link>
