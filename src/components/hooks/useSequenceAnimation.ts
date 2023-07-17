@@ -6,6 +6,7 @@ import {
   At,
 } from "framer-motion";
 import { MutableRefObject, useCallback } from "react";
+import { DEFAULT_DURATION } from "../common/Animation/constant";
 
 interface SequenceItem {
   ref: MutableRefObject<any>;
@@ -28,7 +29,7 @@ export const useSequenceAnimation = (options?: SequenceOptions) => {
         ({ ref, withNav, option }) => [
           withNav ? [ref.current, "nav"] : [ref.current],
           { y: [50, 0], opacity: [0, 1] },
-          { duration: 0.3, ...option },
+          { duration: DEFAULT_DURATION, ...option },
         ]
       );
 
