@@ -1,9 +1,9 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import { FC } from "react";
-import ScrollToDiscover from "../ScrollToDiscover";
 import Lottie from "lottie-react";
 import * as lottieData from "../../../../public/lottie.json";
 import { Motion } from "@/pages";
+import ScrollToDiscover from "@/components/common/ScrollToDiscover";
 
 const HomeHero: FC = () => {
   return (

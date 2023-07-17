@@ -1,5 +1,5 @@
+import Disclosure from "@/components/common/Disclosure";
 import MaxWidth from "@/components/common/MaxWidth";
-import FoldableItem from "@/components/home/FoldableItem";
 import { PRODUCT_PATH } from "@/routes";
 import Link from "next/link";
 import { FC } from "react";
@@ -20,9 +20,14 @@ const HomeSection4: FC = () => {
             Discover more
           </Link>
         </div>
-        <div className="divide-y divide-blue-200 w-full">
+        <div>
           {FEATURES.map(({ title, content }, index) => (
-            <FoldableItem key={index} title={title} content={content} />
+            <Disclosure
+              type="div"
+              key={title}
+              title={title}
+              description={content}
+            />
           ))}
         </div>
       </MaxWidth>

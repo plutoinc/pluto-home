@@ -1,3 +1,5 @@
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header";
 import HomeHero from "@/components/home/Hero";
 import BlogSection from "@/components/home/Sections/Blog";
 import HomeSection1 from "@/components/home/Sections/Section1";
@@ -51,8 +53,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>PlutoLabs</title>
+        <title>Pluto Labs</title>
       </Head>
+      <Header />
       <div className="text-black bg-gradient-to-b from-[#f4f9ff] from-0% to-[#f4f9ff] to-100%">
         <HomeHero />
         <HomeSection1 />
@@ -63,6 +66,7 @@ export default function Home() {
         <HomeSection6 />
         <BlogSection />
       </div>
+      <Footer />
     </>
   );
 }

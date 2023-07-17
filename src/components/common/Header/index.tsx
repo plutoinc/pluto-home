@@ -1,25 +1,13 @@
-import { HOME_PATH } from "@/routes";
+import PlutoLogoIcon from "@/components/icons/PlutoLogoIcon";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FC, useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import MaxWidth from "../MaxWidth";
 import HeaderRightMenu from "./Menu";
-import { HeaderMenu } from "./constant";
 import HeaderToggle from "./Menu/Toggle";
-import { useRouter } from "next/router";
-
-const PlutoLogo: FC = () => {
-  return (
-    <div>
-      <Link
-        href={HOME_PATH}
-        className="h-8 w-24 flex-1 bg-pluto-blue inline-block text-white text-center"
-      >
-        Pluto
-      </Link>
-    </div>
-  );
-};
+import { HeaderMenu } from "./constant";
+import { HOME_PATH } from "@/routes";
 
 const HeaderMenu: FC<HeaderMenu> = ({ href, label }) => {
   return (
@@ -51,7 +39,9 @@ const Header: FC = () => {
         )}
       >
         <div className="flex items-center justify-between w-full">
-          <PlutoLogo />
+          <Link href={{ pathname: HOME_PATH }}>
+            <PlutoLogoIcon color="blue" className="w-24" />
+          </Link>
           <HeaderToggle
             isOpen={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
