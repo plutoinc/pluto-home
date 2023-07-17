@@ -3,40 +3,22 @@ import { FC, useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import * as lottieData from "../../../../public/lottie.json";
 import ScrollToDiscover from "@/components/common/ScrollToDiscover";
-import { AnimationSequence, useAnimate } from "framer-motion";
+import { useSequenceAnimation } from "@/components/hooks/useSequenceAnimation";
 
 const HomeHero: FC = () => {
-  const [scope, animate] = useAnimate();
-
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
   const scrollToDiscoverRef = useRef(null);
 
+  const sequenceAnimate = useSequenceAnimation();
+
   useEffect(() => {
-    if (
-      !titleRef.current ||
-      !descriptionRef.current ||
-      !scrollToDiscoverRef.current
-    ) {
-      return;
-    }
-
-    const sequence: AnimationSequence = [
-      [titleRef.current, { y: [50, 0], opacity: [0, 1] }, { duration: 0.5 }],
-      [
-        [descriptionRef.current, "nav"] as any,
-        { y: [50, 0], opacity: [0, 1] },
-        { duration: 0.5 },
-      ],
-      [
-        scrollToDiscoverRef.current,
-        { y: [50, 0], opacity: [0, 1] },
-        { duration: 0.5 },
-      ],
-    ];
-
-    animate(sequence);
-  }, [animate, scope]);
+    sequenceAnimate([
+      { node: titleRef },
+      { node: descriptionRef },
+      { node: scrollToDiscoverRef },
+    ]);
+  }, [sequenceAnimate]);
 
   return (
     <div className="h-[800px] relative flex tablet:items-center w-full overflow-hidden">
