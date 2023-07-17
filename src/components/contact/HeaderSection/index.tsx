@@ -1,5 +1,5 @@
 import { FC } from "react";
-import PaddingDiv from "../../PaddingDiv";
+import PaddingDiv from "../../common/PaddingDiv";
 
 interface Props {}
 

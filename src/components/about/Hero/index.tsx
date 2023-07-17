@@ -1,5 +1,5 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import ScrollToDiscover from "@/components/home/ScrollToDiscover";
+import ScrollToDiscover from "@/components/common/ScrollToDiscover";
 import { FC } from "react";
 
 interface Props {}

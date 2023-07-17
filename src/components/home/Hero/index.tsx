@@ -1,7 +1,7 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
-import ScrollToDiscover from "../ScrollToDiscover";
+import ScrollToDiscover from "../../common/ScrollToDiscover";
 
 const HomeHero: FC = () => {
   return (

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { FC } from "react";
-import LinkedInIcon from "../icons/LinkedInIcon";
-import MediumLogoIcon from "../icons/MediumLogoIcon";
-import PlutoLogoIcon from "../icons/PlutoLogoIcon";
-import ScinapseLogoIcon from "../icons/ScinapseLogoIcon";
-import TwitterIcon from "../icons/TwitterIcon";
+import LinkedInIcon from "../../icons/LinkedInIcon";
+import MediumLogoIcon from "../../icons/MediumLogoIcon";
+import PlutoLogoIcon from "../../icons/PlutoLogoIcon";
+import ScinapseLogoIcon from "../../icons/ScinapseLogoIcon";
+import TwitterIcon from "../../icons/TwitterIcon";
 
 interface Props {}
 
@@ -32,7 +32,7 @@ const Footer: FC<Props> = () => {
           </div>
 
           <Link href={{ pathname: "/" }}>
-            <PlutoLogoIcon className="w-20" />
+            <PlutoLogoIcon color="white" className="w-20" />
           </Link>
         </div>
 

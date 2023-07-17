@@ -1,4 +1,5 @@
 import PaddingDiv from "@/components/common/PaddingDiv";
+import ScrollToDiscover from "@/components/common/ScrollToDiscover";
 import ScinapseIcon from "@/components/icons/ScinapseIcon";
 import Link from "next/link";
 import { FC } from "react";
@@ -39,16 +40,7 @@ const HeroSection: FC<Props> = () => {
           Try Now
         </Link>
 
-        <div
-          className={twMerge(
-            "flex items-center justify-center",
-            "tablet:justify-start"
-          )}
-        >
-          <div className="text-pluto-blue text-sm text-center">
-            Scroll to discover
-          </div>
-        </div>
+        <ScrollToDiscover />
       </PaddingDiv>
     </div>
   );
