@@ -8,7 +8,7 @@ const HeaderMenuItem: FC<HeaderMenuItem> = ({ href, label }) => {
   return (
     <Link
       href={href}
-      className="text-sm font-medium leading-6 tablet:inline-block"
+      className="text-sm font-medium leading-6 tablet:inline-block flex-shrink-0"
     >
       {label}
     </Link>
@@ -24,6 +24,7 @@ const HeaderRightMenu: FC<Props> = ({ isOpen }) => {
   return (
     <div
       className={twMerge(
+        "text-black",
         isOpen && "flex gap-y-12 items-center tablet:flex-row flex-col w-full",
         !isOpen &&
           "hidden tablet:flex tablet:items-center tablet:flex-row tablet:gap-x-12"

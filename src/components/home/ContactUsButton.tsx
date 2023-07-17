@@ -16,7 +16,7 @@ const ContactUsButton: FC<Props> = ({ className }) => {
         className
       )}
     >
-      Contact us
+      <div>Contact us</div>
     </Link>
   );
 };

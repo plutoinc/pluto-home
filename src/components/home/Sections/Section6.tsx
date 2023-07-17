@@ -1,5 +1,4 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import PaddingDiv from "@/components/common/PaddingDiv";
 import Image from "next/image";
 import { FC } from "react";
 import ContactUsButton from "../ContactUsButton";
@@ -31,7 +30,6 @@ const HomeSection6: FC<Props> = () => {
           <Image
             src="https://framerusercontent.com/images/QVj9dPhzO00WJfHuL8S3OIBlI.png"
             alt="Chart image"
-            layout="responsive"
             width={968}
             height={512}
           />
