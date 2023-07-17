@@ -7,7 +7,7 @@ const PaddingDiv: FC<PropsWithChildren<HTMLAttributes<HTMLDivElement>>> = ({
   ...props
 }) => {
   return (
-    <div {...props} className={twMerge("px-8 tablet:px-[100px]", className)}>
+    <div {...props} className={twMerge("px-8 tablet:px-24", className)}>
       {children}
     </div>
   );
