@@ -20,34 +20,28 @@ const FeaturesSection: FC<Props> = () => {
         discover new insights for better research and business
       </ScrollMotionInView>
 
-      <ScrollMotionInView viewport={{ once: true, margin: "-200px" }}>
-        <FeatureCard
-          direction="right"
-          imageSrc={FieldTrendDemoSrc}
-          title="Literature review"
-          description="We significantly reduce the time spent on literature review and investigating research trends. Researchers can discover rising papers, explore trend graphs, identify influential researchers, and access other relevant information."
-        />
-      </ScrollMotionInView>
+      <FeatureCard
+        direction="right"
+        imageSrc={FieldTrendDemoSrc}
+        title="Literature review"
+        description="We significantly reduce the time spent on literature review and investigating research trends. Researchers can discover rising papers, explore trend graphs, identify influential researchers, and access other relevant information."
+      />
 
-      <ScrollMotionInView viewport={{ once: true, margin: "-200px" }}>
-        <FeatureCard
-          direction="left"
-          imageSrc={PaperCitationTrendDemoSrc}
-          title="Scinapse offers unique and exclusive metrics & analysis"
-          description="By utilizing metrics and analysis, our product provides researchers
+      <FeatureCard
+        direction="left"
+        imageSrc={PaperCitationTrendDemoSrc}
+        title="Scinapse offers unique and exclusive metrics & analysis"
+        description="By utilizing metrics and analysis, our product provides researchers
         with valuable insights without requiring them to read through a
         large number of publications."
-        />
-      </ScrollMotionInView>
+      />
 
-      <ScrollMotionInView viewport={{ once: true, margin: "-200px" }}>
-        <FeatureCard
-          direction="right"
-          imageSrc={QuickFinderDemoSrc}
-          title="Your entire research in one place"
-          description="Including convenient features like favorites and collections, Scinapse tracks and organizes your search and publications you’ve read."
-        />
-      </ScrollMotionInView>
+      <FeatureCard
+        direction="right"
+        imageSrc={QuickFinderDemoSrc}
+        title="Your entire research in one place"
+        description="Including convenient features like favorites and collections, Scinapse tracks and organizes your search and publications you’ve read."
+      />
     </PaddingDiv>
   );
 };
