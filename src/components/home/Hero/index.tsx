@@ -14,9 +14,9 @@ const HomeHero: FC = () => {
 
   useEffect(() => {
     sequenceAnimate([
-      { node: titleRef },
-      { node: descriptionRef },
-      { node: scrollToDiscoverRef },
+      { ref: titleRef },
+      { ref: descriptionRef, withNav: true },
+      { ref: scrollToDiscoverRef },
     ]);
   }, [sequenceAnimate]);
 

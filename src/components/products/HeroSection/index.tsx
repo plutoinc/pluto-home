@@ -1,13 +1,28 @@
 import PaddingDiv from "@/components/common/PaddingDiv";
 import ScrollToDiscover from "@/components/common/ScrollToDiscover";
+import { useSequenceAnimation } from "@/components/hooks/useSequenceAnimation";
 import ScinapseIcon from "@/components/icons/ScinapseIcon";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useRef, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface Props {}
 
 const HeroSection: FC<Props> = () => {
+  const sequenceAnimate = useSequenceAnimation();
+
+  const scinapseRef = useRef(null);
+  const linkRef = useRef(null);
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    sequenceAnimate([
+      { ref: scinapseRef },
+      { ref: linkRef, withNav: true },
+      { ref: scrollRef },
+    ]);
+  }, [sequenceAnimate]);
+
   return (
     <div className="bg-gradient-to-b from-pluto-deep-blue to-pluto-dark-blue mx-auto">
       <PaddingDiv
@@ -17,6 +32,7 @@ const HeroSection: FC<Props> = () => {
         )}
       >
         <div
+          ref={scinapseRef}
           className={twMerge(
             "pt-28 space-y-8",
             "tablet:w-[500px] tablet:pt-44"
@@ -30,6 +46,7 @@ const HeroSection: FC<Props> = () => {
         </div>
 
         <Link
+          ref={linkRef}
           className={twMerge(
             "block bg-white w-full font-bold rounded-lg text-center py-4 text-pluto-deep-blue text-lg tablet:text-xl shadow-xl px-10",
             "tablet:inline-block tablet:w-fit"
@@ -39,8 +56,9 @@ const HeroSection: FC<Props> = () => {
         >
           Try Now
         </Link>
-
-        <ScrollToDiscover />
+        <div ref={scrollRef}>
+          <ScrollToDiscover />
+        </div>
       </PaddingDiv>
     </div>
   );
