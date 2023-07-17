@@ -1,7 +1,17 @@
-import { FC, FormEvent, useCallback, useState } from "react";
+import axios from "axios";
+import {
+  Dispatch,
+  FC,
+  FormEvent,
+  SetStateAction,
+  useCallback,
+  useState,
+} from "react";
 import Input from "./Input";
 
-interface Props {}
+interface Props {
+  setIsSendSuccess: Dispatch<SetStateAction<boolean>>;
+}
 
 type FormData = {
   name: string;
@@ -19,6 +29,13 @@ type FormError = {
   message?: ErrorMessage;
 };
 
+const checkValidEmailRegex =
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+function validateEmail(email: string) {
+  return checkValidEmailRegex.test(email) && email !== "" && email.length > 0;
+}
+
 const DEFAULT_STATE: FormData = {
   affiliation: "",
   email: "",
@@ -26,7 +43,7 @@ const DEFAULT_STATE: FormData = {
   name: "",
 };
 
-const ContactForm: FC<Props> = () => {
+const ContactForm: FC<Props> = ({ setIsSendSuccess }) => {
   const [form, setForm] = useState<{ data: FormData; error?: FormError }>({
     data: DEFAULT_STATE,
   });
@@ -54,15 +71,23 @@ const ContactForm: FC<Props> = () => {
       const error: FormError = {};
 
       if (!form.data.name) {
-        error.name = "Name is required";
+        alert("Name is required");
+        return;
       }
 
       if (!form.data.email) {
-        error.email = "Email is required";
+        alert("Email is required");
+        return;
+      }
+
+      if (!validateEmail(form.data.email)) {
+        alert("Email is invalid");
+        return;
       }
 
       if (!form.data.affiliation) {
-        error.affiliation = "Affiliation is required";
+        alert("Affiliation is required");
+        return;
       }
 
       if (!!Object.values(error).length) {
@@ -70,9 +95,40 @@ const ContactForm: FC<Props> = () => {
         return;
       }
 
-      setForm({ data: DEFAULT_STATE });
+      const content = JSON.stringify(form);
+
+      Promise.all([
+        axios
+          .post("https://api.scinapse.io/contact/feedback", {
+            content,
+            email: form.data.email,
+          })
+          .catch(console.error),
+        axios
+          .post(
+            "https://plutolabs.freshdesk.com/api/v2/tickets",
+            {
+              email: form.data.email,
+              subject: `[Feedback] ${content.slice(0, 100)}`,
+              description: content,
+              source: 9,
+              status: 2,
+              priority: 2,
+            },
+            {
+              headers: { "Content-Type": "application/json" },
+              auth: {
+                username: process.env["NEXT_PUBLIC_FRESHDESK_API_KEY"]!,
+                password: "X",
+              },
+            }
+          )
+          .catch(console.error),
+      ])
+        .then(() => setIsSendSuccess(true))
+        .catch(console.error);
     },
-    [form]
+    [form, setIsSendSuccess]
   );
 
   return (
