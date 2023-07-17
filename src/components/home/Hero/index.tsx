@@ -1,12 +1,13 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import PaddingDiv from "@/components/common/PaddingDiv";
 import { FC } from "react";
-import ScrollToDiscover from "../../common/ScrollToDiscover";
+import Lottie from "lottie-react";
+import * as lottieData from "../../../../public/lottie.json";
+import ScrollToDiscover from "@/components/common/ScrollToDiscover";
 
 const HomeHero: FC = () => {
   return (
-    <PaddingDiv className="py-16 tablet:py-48 h-[800px] flex tablet:items-center">
-      <MaxWidth className="space-y-12">
+    <div className="h-[800px] relative flex tablet:items-center w-full overflow-hidden">
+      <MaxWidth className="space-y-12 py-16 tablet:py-48 min-h-0">
         <div className="break-words font-extrabold text-3xl tablet:text-5xl">
           <div>Innovate</div>
           <div>Innovations</div>
@@ -18,8 +19,17 @@ const HomeHero: FC = () => {
         </div>
         <ScrollToDiscover />
       </MaxWidth>
-      {/* Lottie image later */}
-    </PaddingDiv>
+      <div className="absolute -bottom-[40%] flex justify-center -left-1/2 -right-1/2 tablet:top-0 tablet:left-1/2 desktop:left-1/4">
+        <Lottie
+          animationData={lottieData}
+          loop
+          autoplay
+          width={1000}
+          height={1000}
+          className="min-w-[600px]"
+        />
+      </div>
+    </div>
   );
 };
 
