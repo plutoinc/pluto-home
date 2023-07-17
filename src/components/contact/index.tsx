@@ -1,7 +1,7 @@
 import { FC } from "react";
-import HeaderSection from "./HeaderSection";
-import ContactForm from "./ContactForm";
 import PaddingDiv from "../common/PaddingDiv";
+import ContactForm from "./ContactForm";
+import HeaderSection from "./HeaderSection";
 
 interface Props {}
 
