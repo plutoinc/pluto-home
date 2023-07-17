@@ -23,10 +23,10 @@ const Cards: FC = () => {
       <div className="tablet:w-[556px] h-[389px] tablet:translate-x-1/4 tablet:relative overflow-hidden rounded-3xl bg-white w-full absolute bottom-0 rounded-t-none tablet:rounded-t-3xl border tablet:border-none">
         <Image
           src="https://framerusercontent.com/images/jIoRwB41bckHO8BWLN0CJwa0.png"
-          className="bg-no-repeat absolute inset-0 object-cover object-center h-full tablet:h-auto"
+          className="bg-no-repeat absolute object-cover object-center h-full inset-0"
           alt="Scinapse main page"
-          width={556}
-          height={389}
+          width={1000}
+          height={1000}
         />
       </div>
     </div>
