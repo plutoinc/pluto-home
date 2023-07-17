@@ -1,5 +1,4 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import PaddingDiv from "@/components/common/PaddingDiv";
 import ScrollToDiscover from "@/components/home/ScrollToDiscover";
 import { FC } from "react";
 
@@ -13,7 +12,7 @@ const AboutHero: FC<Props> = () => {
           <div className="tracking-[2px] font-semibold opacity-50">
             ABOUT US
           </div>
-          <div className="text-white font-extrabold text-3xl tablet:text-[50px] -tracking-[2px] leading-[1.2] max-w-[500px]">
+          <div className="text-white font-extrabold text-3xl tablet:text-[50px] desktop:-tracking-[2px] leading-[1.2] max-w-[500px]">
             A researcher-oriented research ecosystem.
           </div>
           <div className="text-white text-lg font-medium max-w-[500px]">

@@ -1,5 +1,4 @@
 import MaxWidth from "@/components/common/MaxWidth";
-import PaddingDiv from "@/components/common/PaddingDiv";
 import Image from "next/image";
 import { FC } from "react";
 import ContactUsButton from "../ContactUsButton";
@@ -21,24 +20,15 @@ const Cards: FC = () => {
         </div>
         <ContactUsButton className="bg-white text-black" />
       </div>
-      <div className="tablet:w-[556px] h-[389px] tablet:translate-x-1/4 tablet:relative overflow-hidden rounded-3xl bg-white w-full absolute bottom-0 rounded-t-none tablet:rounded-t-3xl">
+      <div className="tablet:w-[556px] h-[389px] tablet:translate-x-1/4 tablet:relative overflow-hidden rounded-3xl bg-white w-full absolute bottom-0 rounded-t-none tablet:rounded-t-3xl border tablet:border-none">
         <Image
           src="https://framerusercontent.com/images/jIoRwB41bckHO8BWLN0CJwa0.png"
-          className="bg-no-repeat absolute inset-0 object-cover object-center w-full h-full"
+          className="bg-no-repeat absolute inset-0 object-cover object-center h-full tablet:h-auto"
           alt="Scinapse main page"
           width={556}
           height={389}
         />
       </div>
-      {/* <div className="tablet:w-[556px] h-[389px] tablet:translate-x-1/4 relative overflow-hidden rounded-3xl bg-white w-full">
-        <Image
-          src="https://framerusercontent.com/images/jIoRwB41bckHO8BWLN0CJwa0.png"
-          className="bg-no-repeat absolute inset-0 object-cover object-center w-full h-full"
-          alt="Scinapse main page"
-          width={556}
-          height={389}
-        />
-      </div> */}
     </div>
   );
 };

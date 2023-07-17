@@ -1,7 +1,6 @@
 import { HOME_PATH } from "@/routes";
 import Link from "next/link";
-import { FC, useCallback, useEffect, useState } from "react";
-import { X } from "react-feather";
+import { FC, useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import MaxWidth from "../MaxWidth";
 import HeaderRightMenu from "./Menu";
@@ -47,9 +46,8 @@ const Header: FC = () => {
     <div className="sticky top-0 bg-white z-50">
       <MaxWidth
         className={twMerge(
-          "py-6 px-6 gap-12 flex items-center",
-          isMobileMenuOpen && "flex-col text-center",
-          !isMobileMenuOpen && "h-20 flex-row"
+          "py-6 px-6 gap-12 flex items-center tablet:h-20",
+          isMobileMenuOpen && "flex-col text-center tablet:flex-row"
         )}
       >
         <div className="flex items-center justify-between w-full">
