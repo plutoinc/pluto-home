@@ -22,8 +22,6 @@ const AboutHero: FC<Props> = () => {
     ]);
   }, [animate]);
 
-  console.log(descriptionRef);
-
   return (
     <div className="bg-gradient-to-b from-pluto-deep-blue from-0% to-100% to-pluto-dark-blue text-[#F2F6FD]">
       <MaxWidth className="space-y-12 py-16 tablet:py-24">
