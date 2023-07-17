@@ -102,7 +102,7 @@ const ContactForm: FC<Props> = () => {
           <textarea
             placeholder="Message"
             rows={4}
-            className="p-3 text-sm w-full rounded"
+            className="px-3 py-2.5 text-sm w-full rounded"
             onChange={(e) => changeMessage(e.target.value)}
           />
         </label>

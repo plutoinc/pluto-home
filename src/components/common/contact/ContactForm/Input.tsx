@@ -13,7 +13,7 @@ const Input: FC<Props> = ({ label, error, ...props }) => {
       <input
         {...props}
         autoComplete="off"
-        className={twMerge("p-3 text-sm w-full rounded border")}
+        className={twMerge("py-2.5 px-3 text-sm w-full rounded border")}
         type="text"
       />
     </label>
