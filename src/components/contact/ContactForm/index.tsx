@@ -163,7 +163,7 @@ const ContactForm: FC<Props> = ({ setIsSendSuccess }) => {
           />
         </label>
 
-        <button className="text-white p-4 bg-pluto-dark-blue rounded font-medium">
+        <button className="text-white p-4 bg-pluto-dark-blue rounded font-semibold">
           Submit
         </button>
       </form>

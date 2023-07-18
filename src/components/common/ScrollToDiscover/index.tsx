@@ -10,7 +10,7 @@ const ScrollToDiscover: FC<Props> = ({ className }) => {
   return (
     <div
       className={twMerge(
-        "flex items-center gap-x-2.5 text-[#709edb] text-sm",
+        "flex items-center gap-x-2.5 text-pluto-dark-blue text-sm",
         className
       )}
     >

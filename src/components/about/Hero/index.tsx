@@ -22,7 +22,7 @@ const AboutHero: FC<Props> = () => {
             papers.
           </div>
         </div>
-        <ScrollToDiscover />
+        <ScrollToDiscover className="text-blue-400" />
       </MaxWidth>
     </div>
   );

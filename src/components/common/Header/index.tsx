@@ -31,7 +31,7 @@ const Header: FC = () => {
   }, [router.events]);
 
   return (
-    <div className="sticky top-0 bg-white z-50">
+    <div className="sticky top-0 text-gray-800 shadow-sm bg-white z-50">
       <MaxWidth
         className={twMerge(
           "py-6 px-6 gap-12 flex items-center tablet:h-20",

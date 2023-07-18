@@ -1,5 +1,5 @@
-import ChevronUpIcon from "@/components/icons/ChevronUpIcon";
 import { FC, useState } from "react";
+import { ChevronUp } from "react-feather";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
@@ -19,7 +19,7 @@ const Disclosure: FC<Props> = ({ type, title, description, descriptions }) => {
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <div className="text-xl font-semibold flex-1">{title}</div>
-        <ChevronUpIcon
+        <ChevronUp
           className={twMerge(
             "w-6 h-6 transition-transform rotate-180",
             isOpen && "rotate-0"

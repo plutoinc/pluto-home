@@ -7,12 +7,12 @@ interface Props {
   className?: string;
 }
 
-const ContactUsButton: FC<Props> = ({ className }) => {
+const ContactUsLink: FC<Props> = ({ className }) => {
   return (
     <Link
       href={CONTACT_PATH}
       className={twMerge(
-        "bg-pluto-dark-blue justify-center text-white font-bold w-full rounded-lg shadow px-4 text-sm tablet:w-fit h-10 flex items-center",
+        // "bg-pluto-dark-blue justify-center text-white font-bold w-full rounded-lg shadow px-4 text-sm tablet:w-fit h-10 flex items-center",
         className
       )}
     >
@@ -21,4 +21,4 @@ const ContactUsButton: FC<Props> = ({ className }) => {
   );
 };
 
-export default ContactUsButton;
+export default ContactUsLink;

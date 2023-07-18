@@ -1,7 +1,7 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import Image from "next/image";
 import { FC } from "react";
-import ContactUsButton from "../ContactUsButton";
+import ContactUsLink from "../ContactUsButton";
 
 interface Props {}
 
@@ -25,7 +25,9 @@ const HomeSection6: FC<Props> = () => {
             </li>
           </ul>
         </div>
-        <ContactUsButton />
+
+        <ContactUsLink className="bg-pluto-dark-blue inline-block px-4 py-2.5 text-sm font-bold text-white rounded-lg shadow-md shadow-gray-400" />
+
         <div className="bg-white p-4 rounded-2xl">
           <Image
             src="https://framerusercontent.com/images/QVj9dPhzO00WJfHuL8S3OIBlI.png"

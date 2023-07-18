@@ -31,7 +31,13 @@ const Sponsor: FC = () => {
         <div className="text-3xl font-semibold tablet:font-extrabold">
           Backed by
         </div>
-        <div className="flex mx-auto w-full overflow-hidden gap-x-16 max-h-24 h-full">
+        <div
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)",
+          }}
+          className="relative flex mx-auto w-full overflow-hidden gap-x-16 max-h-24 h-full"
+        >
           <SponsorList />
           <SponsorList />
         </div>

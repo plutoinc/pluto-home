@@ -1,7 +1,7 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import Image from "next/image";
 import { FC } from "react";
-import ContactUsButton from "../ContactUsButton";
+import ContactUsLink from "../ContactUsButton";
 import OurPartners from "../Partners";
 import ScinapseIcon from "@/components/icons/ScinapseIcon";
 
@@ -19,8 +19,10 @@ const Cards: FC = () => {
           Not just a simple search engine. Intelligent data and quick access to
           state-of-the-art insights.
         </div>
-        <ContactUsButton className="bg-white text-black" />
+
+        <ContactUsLink className="bg-white inline-block px-4 py-2.5 text-sm rounded-lg font-bold text-pluto-deep-blue shadow-md" />
       </div>
+
       <div className="tablet:w-[556px] h-[389px] tablet:translate-x-1/4 tablet:relative overflow-hidden rounded-3xl bg-white w-full absolute bottom-0 rounded-t-none tablet:rounded-t-3xl border tablet:border-none">
         <Image
           src="https://framerusercontent.com/images/jIoRwB41bckHO8BWLN0CJwa0.png"

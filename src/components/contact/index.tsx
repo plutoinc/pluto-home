@@ -9,10 +9,10 @@ const Contact: FC<Props> = () => {
   const [isSendSuccess, setIsSendSuccess] = useState(false);
 
   return (
-    <div className="bg-gradient-to-b flex-1 from-pluto-deep-blue to-blue-100">
+    <div className="bg-gradient-to-b flex-1 text-gray-700 from-pluto-deep-blue to-blue-100">
       <div className="max-w-7xl mx-auto">
-        <PaddingDiv className="tablet:flex tablet:gap-x-16 tablet:space-y-0 space-y-16 py-16 tablet:py-24">
-          <div className="space-y-6">
+        <PaddingDiv className="tablet:flex tablet:gap-x-36 tablet:space-y-0 space-y-16 py-16 tablet:py-24">
+          <div className="space-y-6 flex-1">
             <HeaderSection />
 
             {isSendSuccess && (
@@ -21,6 +21,7 @@ const Contact: FC<Props> = () => {
               </div>
             )}
           </div>
+
           <ContactForm setIsSendSuccess={setIsSendSuccess} />
         </PaddingDiv>
       </div>

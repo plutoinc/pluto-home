@@ -9,7 +9,7 @@ interface Props {}
 
 const Product: FC<Props> = () => {
   return (
-    <main>
+    <main className="text-gray-700">
       <HeroSection />
       <StatsSection />
       <AboutSection />

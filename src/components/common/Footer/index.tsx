@@ -41,7 +41,14 @@ const Footer: FC<Props> = () => {
 
         <div className="text-sm text-[#b4caea] text-center space-y-6 tablet:flex tablet:items-center tablet:space-y-0 tablet:justify-between">
           <div>© 2023 Pluto Labs, Inc. All rights reserved.</div>
-          <div>support@pluto.im</div>
+          <div className="flex flex-col gap-y-1.5 items-center space-x-1 tablet:flex-row">
+            <div>support@pluto.im</div>
+            <div className="hidden tablet:block">|</div>
+            <div>
+              14-6 Teheran-ro 78-gil, Gangnam-gu, Seoul, 06194, Republic of
+              Korea
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ const HeroSection: FC<Props> = () => {
           Try Now
         </Link>
 
-        <ScrollToDiscover />
+        <ScrollToDiscover className="text-blue-400" />
       </PaddingDiv>
     </div>
   );
