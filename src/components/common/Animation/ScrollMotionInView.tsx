@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 import { HTMLMotionProps, motion } from "framer-motion";
-import { DEFAULT_DURATION } from "./constant";
+import { DEFAULT_DURATION, DEFAULT_Y } from "./constant";
 
 const ScrollMotionInView: FC<PropsWithChildren<HTMLMotionProps<"div">>> = ({
   children,
@@ -8,9 +8,9 @@ const ScrollMotionInView: FC<PropsWithChildren<HTMLMotionProps<"div">>> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: DEFAULT_Y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-150px" }}
       transition={{ duration: DEFAULT_DURATION }}
       {...props}
     >
