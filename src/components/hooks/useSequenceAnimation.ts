@@ -19,9 +19,9 @@ export const useSequenceAnimation = (options?: SequenceOptions) => {
 
   return useCallback(
     (items: SequenceItem[]) => {
-      const isValid = items.every(({ ref: node }) => node.current !== null);
+      const hasEmptyNode = items.some(({ ref }) => ref.current === null);
 
-      if (!isValid) {
+      if (hasEmptyNode) {
         return;
       }
 

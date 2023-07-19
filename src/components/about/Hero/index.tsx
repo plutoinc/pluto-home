@@ -7,7 +7,7 @@ import { FC, useEffect, useRef } from "react";
 interface Props {}
 
 const AboutHero: FC<Props> = () => {
-  const animate = useSequenceAnimation();
+  const sequenceAnimate = useSequenceAnimation();
 
   const titleRef = useRef(null);
   const aboutUsRef = useRef(null);
@@ -15,13 +15,13 @@ const AboutHero: FC<Props> = () => {
   const scrollToDiscoverRef = useRef(null);
 
   useEffect(() => {
-    animate([
+    sequenceAnimate([
       { ref: titleRef },
       { ref: descriptionRef, withNav: true, option: { at: DEFAULT_DURATION } },
       { ref: aboutUsRef, withNav: true, option: { at: DEFAULT_DURATION } },
       { ref: scrollToDiscoverRef },
     ]);
-  }, [animate]);
+  }, [sequenceAnimate]);
 
   return (
     <div className="bg-gradient-to-b from-pluto-deep-blue from-0% to-100% to-pluto-dark-blue text-[#F2F6FD]">

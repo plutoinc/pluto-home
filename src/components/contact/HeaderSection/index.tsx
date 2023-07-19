@@ -5,14 +5,14 @@ import { FC, useEffect, useRef } from "react";
 interface Props {}
 
 const HeaderSection: FC<Props> = () => {
-  const animate = useSequenceAnimation();
+  const sequenceAnimate = useSequenceAnimation();
 
   const connectRef = useRef(null);
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
 
   useEffect(() => {
-    animate([
+    sequenceAnimate([
       { ref: titleRef },
       { ref: connectRef, withNav: true, option: { at: DEFAULT_DURATION } },
       {
@@ -21,7 +21,7 @@ const HeaderSection: FC<Props> = () => {
         option: { at: DEFAULT_DURATION },
       },
     ]);
-  });
+  }, [sequenceAnimate]);
 
   return (
     <div className="flex-1 space-y-6">
