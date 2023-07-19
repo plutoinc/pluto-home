@@ -1,25 +1,30 @@
+import atlanticSrc from "@/assets/home/logo/atlantic.webp";
+import scientificAmericanSrc from "@/assets/home/logo/scientific-american.webp";
+import chicagoUnivSrc from "@/assets/home/logo/chicago-univ.webp";
+import voxSrc from "@/assets/home/logo/vox.webp";
+
 export const LOGOS = [
   {
     href: "https://blogs.scientificamerican.com/cross-check/is-science-hitting-a-wall-part-1/",
-    alt: "string",
-    src: "https://framerusercontent.com/images/2Tp0iY7jG3HdeuVMsFZtR9Yto.png",
+    alt: "Scientific-American",
+    src: scientificAmericanSrc,
     className: "w-[150px]",
   },
   {
     href: "https://news.uchicago.edu/scientific-progress-slowing-james-evans",
-    alt: "string",
-    src: "https://framerusercontent.com/images/1PIVPAowzI2v2Q87do85PeUHfUI.png",
+    alt: "The university of Chicago",
+    src: chicagoUnivSrc,
     className: "w-[150px]",
   },
   {
     href: "https://www.theatlantic.com/science/archive/2018/11/diminishing-returns-science/575665/",
-    alt: "string",
-    src: "https://framerusercontent.com/images/ybg1js6IeYiwdHQE1VgwlNIJgQ.png",
+    alt: "The Atlantic",
+    src: atlanticSrc,
     className: "w-[146px]",
   },
   {
     href: "https://www.vox.com/future-perfect/2023/1/11/23549993/science-research-progress-studies-disruption-technology-artificial-intelligence-biotechnology",
-    alt: "string",
+    alt: voxSrc,
     src: "https://framerusercontent.com/images/3ajgWx1rprwWWnmWPUy0KLdnn4.png",
     className: "w-16",
   },

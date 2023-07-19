@@ -21,7 +21,7 @@ const HomeSection3: FC<Props> = () => {
             experience.
           </span>
         </ScrollMotionInView>
-        <video src="/pluto-technology.mp4" autoPlay muted />
+        <video src="/video/pluto-technology.mp4" autoPlay muted />
       </MaxWidth>
     </div>
   );
