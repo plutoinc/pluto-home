@@ -27,11 +27,9 @@ export const useSequenceAnimation = () => {
       const sequence: AnimationSequence = items.map(
         ({ ref, withNav, option }) => [
           ref.current,
-          // withNav ? [ref.current, "nav"] : [ref.current],
           { y: [DEFAULT_Y, 0], opacity: [0, 1] },
           {
             duration: DEFAULT_DURATION,
-            at: withNav ? "nav" : option?.at,
             ...option,
           },
         ]
