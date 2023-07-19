@@ -4,7 +4,7 @@ import {
   DynamicAnimationOptions,
   At,
 } from "framer-motion";
-import { MutableRefObject, useCallback, useEffect, useState } from "react";
+import { MutableRefObject, useCallback } from "react";
 import { DEFAULT_DURATION, DEFAULT_Y } from "../common/Animation/constant";
 
 interface SequenceItem {
@@ -14,23 +14,13 @@ interface SequenceItem {
 }
 
 export const useSequenceAnimation = () => {
-  const [isMounted, setIsMounted] = useState(false);
-
   const [_, animate] = useAnimate();
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   return useCallback(
     (items: SequenceItem[]) => {
       const hasEmptyNode = items.some(({ ref }) => ref.current === null);
 
       if (hasEmptyNode) {
-        return;
-      }
-
-      if (!isMounted) {
         return;
       }
 
@@ -48,6 +38,6 @@ export const useSequenceAnimation = () => {
 
       animate(sequence);
     },
-    [animate, isMounted]
+    [animate]
   );
 };
