@@ -1,3 +1,4 @@
+import ScrollMotionInView from "@/components/common/Animation/ScrollMotionInView";
 import MaxWidth from "@/components/common/MaxWidth";
 import { FC } from "react";
 import {
@@ -28,13 +29,13 @@ const Sponsor: FC = () => {
   return (
     <div className="bg-white">
       <MaxWidth className="py-[72px] tablet:py-24 space-y-8 tablet:space-y-16">
-        <div className="text-3xl font-semibold tablet:font-extrabold">
+        <ScrollMotionInView className="text-3xl font-semibold tablet:font-extrabold">
           Backed by
-        </div>
-        <div className="flex mx-auto w-full overflow-hidden gap-x-16 max-h-24 h-full">
+        </ScrollMotionInView>
+        <ScrollMotionInView className="flex mx-auto w-full overflow-hidden gap-x-16 max-h-24 h-full">
           <SponsorList />
           <SponsorList />
-        </div>
+        </ScrollMotionInView>
       </MaxWidth>
     </div>
   );
