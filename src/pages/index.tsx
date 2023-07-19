@@ -16,8 +16,10 @@ export default function Home() {
       <Head>
         <title>Pluto Labs</title>
       </Head>
+
       <Header />
-      <div className="text-black bg-gradient-to-b from-[#f4f9ff] from-0% to-[#f4f9ff] to-100%">
+
+      <div className="text-gray-700 bg-[#f4f9ff]">
         <HomeHero />
         <HomeSection1 />
         <HomeSection2 />

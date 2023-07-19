@@ -12,7 +12,7 @@ const AboutPage: NextPage = () => {
   return (
     <div>
       <Header />
-      <div className="text-black bg-[#f4f9ff]">
+      <div className="text-gray-700 bg-[#f4f9ff]">
         <AboutHero />
         <VisionMission />
         <ChangeToBring />

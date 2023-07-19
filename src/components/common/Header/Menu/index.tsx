@@ -1,4 +1,4 @@
-import ContactUsButton from "@/components/home/ContactUsButton";
+import ContactUsLink from "@/components/common/ContactUsLink";
 import Link from "next/link";
 import { FC } from "react";
 import { HEADER_MENU, HeaderMenu as HeaderMenuItem } from "../constant";
@@ -7,7 +7,7 @@ const HeaderMenuItem: FC<HeaderMenuItem> = ({ href, label }) => {
   return (
     <Link
       href={href}
-      className="text-sm font-medium leading-6 tablet:inline-block flex-shrink-0"
+      className="flex-shrink-0 text-sm font-medium leading-6 tablet:inline-block"
     >
       {label}
     </Link>
@@ -25,22 +25,22 @@ const MobileHeaderRightMenu: FC<{ isOpen: boolean }> = ({ isOpen }) => {
   }
 
   return (
-    <div className="flex gap-y-12 items-center flex-col w-full text-black tablet:hidden">
+    <div className="flex w-full flex-col items-center gap-y-12 tablet:hidden">
       {HEADER_MENU.map((menu) => (
         <HeaderMenuItem key={menu.label} {...menu} />
       ))}
-      <ContactUsButton className="bg-pluto-deep-blue whitespace-nowrap tablet:flex items-center" />
+      <ContactUsLink className="w-full items-center whitespace-nowrap rounded-lg bg-pluto-deep-blue px-4 py-2.5 text-sm font-semibold text-white tablet:flex" />
     </div>
   );
 };
 
 const DesktopHeaderRightMenu: FC = () => {
   return (
-    <div className="text-black hidden tablet:flex tablet:items-center tablet:flex-row tablet:gap-x-12">
+    <div className="hidden tablet:flex tablet:flex-row tablet:items-center tablet:gap-x-12">
       {HEADER_MENU.map((menu) => (
         <HeaderMenuItem key={menu.label} {...menu} />
       ))}
-      <ContactUsButton className="bg-pluto-deep-blue whitespace-nowrap tablet:flex items-center" />
+      <ContactUsLink className="items-center whitespace-nowrap rounded-lg bg-pluto-deep-blue px-4 py-2.5 text-sm font-semibold text-white tablet:flex" />
     </div>
   );
 };
