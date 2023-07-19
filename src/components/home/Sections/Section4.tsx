@@ -15,7 +15,7 @@ const HomeSection4: FC = () => {
           </div>
           <Link
             href={PRODUCT_PATH}
-            className="text-sm h-10 text-white px-2.5 bg-pluto-deep-blue rounded-lg shadow text-center font-extrabold inline-flex items-center"
+            className="text-sm py-2.5 text-white px-4 bg-pluto-deep-blue rounded-lg text-center font-extrabold inline-flex items-center shadow-md shadow-gray-400"
           >
             Discover more
           </Link>
