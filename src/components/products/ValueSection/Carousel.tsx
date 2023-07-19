@@ -1,22 +1,13 @@
-import {
-  FC,
-  Fragment,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import { ChevronLeft, ChevronRight } from "react-feather";
-import { twMerge } from "tailwind-merge";
+import { FC, Fragment, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'react-feather';
+import { twMerge } from 'tailwind-merge';
 
 const PreviousButton = ({ handleClick }: { handleClick: () => void }) => {
   return (
     <div className="absolute left-0 h-full">
       <div
         style={{
-          background:
-            "linear-gradient(to right,rgba(255,255,255,100), rgba(0,0,0,0))",
+          background: 'linear-gradient(to right,rgba(255,255,255,100), rgba(0,0,0,0))',
         }}
         className="absolute left-0 z-10 h-full w-14 opacity-0 transition-opacity group-hover:opacity-100"
       />
@@ -36,8 +27,7 @@ const NextButton = ({ handleClick }: { handleClick: () => void }) => {
     <div className="absolute right-0 h-full">
       <div
         style={{
-          background:
-            "linear-gradient(to left,rgba(255,255,255,100), rgba(0,0,0,0))",
+          background: 'linear-gradient(to left,rgba(255,255,255,100), rgba(0,0,0,0))',
         }}
         className="absolute right-0 h-full w-14 opacity-0 transition-opacity group-hover:opacity-100"
       />
@@ -67,8 +57,8 @@ const Dots: FC<DotsProps> = ({ current, items, handleClick }) => {
             key={index}
             onClick={() => handleClick(index)}
             className={twMerge(
-              "h-3 w-3 cursor-pointer rounded-full bg-gray-200 transition-colors hover:bg-blue-300 hover:ring-1 hover:ring-gray-200",
-              index === current && "!bg-blue-500 !ring-2 ring-blue-100",
+              'h-3 w-3 cursor-pointer rounded-full bg-gray-200 transition-colors hover:bg-blue-300 hover:ring-1 hover:ring-gray-200',
+              index === current && '!bg-blue-500 !ring-2 ring-blue-100'
             )}
           />
         );
@@ -92,13 +82,9 @@ function Carousel({ items }: Props) {
     const margin = 16;
     const clientWidth = track.current.children[0].clientWidth;
 
-    track.current.style.transition = transition
-      ? "transform 0.4s ease-in-out"
-      : "";
+    track.current.style.transition = transition ? 'transform 0.4s ease-in-out' : '';
 
-    track.current.style.transform = `translateX(${
-      -((clientWidth + margin) * posX) - (clientWidth + margin)
-    }px)`;
+    track.current.style.transform = `translateX(${-((clientWidth + margin) * posX) - (clientWidth + margin)}px)`;
   }, []);
 
   const changeCounter = useCallback(
@@ -106,7 +92,7 @@ function Carousel({ items }: Props) {
       translate(index, option?.transition ?? false);
       setCounter(index);
     },
-    [translate],
+    [translate]
   );
 
   const onClickNextButton = useCallback(() => {
@@ -125,7 +111,7 @@ function Carousel({ items }: Props) {
     }
 
     const trackElm = track.current;
-    trackElm.addEventListener("transitionend", handler);
+    trackElm.addEventListener('transitionend', handler);
 
     function handler() {
       if (counter === items.length) {
@@ -139,7 +125,7 @@ function Carousel({ items }: Props) {
       }
     }
 
-    return () => trackElm.removeEventListener("transitionend", handler);
+    return () => trackElm.removeEventListener('transitionend', handler);
   }, [changeCounter, counter, items.length]);
 
   return (
@@ -151,7 +137,7 @@ function Carousel({ items }: Props) {
           <div
             ref={track}
             className={twMerge(
-              "flex w-full -translate-x-[calc(100%+16px)] items-stretch py-1 tablet:-translate-x-[calc(50%+16px)]",
+              'flex w-full -translate-x-[calc(100%+16px)] items-stretch py-1 tablet:-translate-x-[calc(50%+16px)]'
             )}
           >
             {items[items.length - 1]}
@@ -175,11 +161,7 @@ function Carousel({ items }: Props) {
         <NextButton handleClick={onClickNextButton} />
       </div>
 
-      <Dots
-        current={counter}
-        handleClick={(index) => changeCounter(index, { transition: true })}
-        items={items}
-      />
+      <Dots current={counter} handleClick={(index) => changeCounter(index, { transition: true })} items={items} />
     </div>
   );
 }

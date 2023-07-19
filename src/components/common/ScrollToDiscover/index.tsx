@@ -10,8 +10,8 @@ const ScrollToDiscover: FC<Props> = ({ className }) => {
   return (
     <div
       className={twMerge(
-        "flex items-center gap-x-2.5 text-pluto-dark-blue text-sm",
-        className
+        "flex items-center gap-x-2.5 text-sm text-pluto-dark-blue",
+        className,
       )}
     >
       <ArrowDownCircle className="w-6 animate-bounce" />
