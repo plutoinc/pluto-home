@@ -1,4 +1,4 @@
-import { FC, Fragment, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, Fragment, ReactNode, useCallback, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import { twMerge } from 'tailwind-merge';
 
@@ -105,27 +105,16 @@ function Carousel({ items }: Props) {
     changeCounter(counter - 1, { transition: true });
   }, [changeCounter, counter]);
 
-  useEffect(() => {
-    if (!track.current) {
+  const handleTransitionEnd = useCallback(() => {
+    if (counter === items.length) {
+      changeCounter(0, { transition: false });
       return;
     }
 
-    const trackElm = track.current;
-    trackElm.addEventListener('transitionend', handler);
-
-    function handler() {
-      if (counter === items.length) {
-        changeCounter(0, { transition: false });
-        return;
-      }
-
-      if (counter === -1) {
-        changeCounter(items.length - 1, { transition: false });
-        return;
-      }
+    if (counter === -1) {
+      changeCounter(items.length - 1, { transition: false });
+      return;
     }
-
-    return () => trackElm.removeEventListener('transitionend', handler);
   }, [changeCounter, counter, items.length]);
 
   return (
@@ -136,21 +125,18 @@ function Carousel({ items }: Props) {
         <div className="overflow-x-hidden">
           <div
             ref={track}
-            className={twMerge(
-              'flex w-full -translate-x-[calc(100%+16px)] items-stretch py-1 tablet:-translate-x-[calc(50%+16px)]'
-            )}
+            onTransitionEnd={handleTransitionEnd}
+            className="flex w-full -translate-x-[calc(100%+16px)] items-stretch py-1 tablet:-translate-x-[calc(50%+16px)]"
           >
             {items[items.length - 1]}
             <Divider />
 
-            {items.map((item, index) => {
-              return (
-                <Fragment key={index}>
-                  {item}
-                  <Divider />
-                </Fragment>
-              );
-            })}
+            {items.map((item, index) => (
+              <Fragment key={index}>
+                {item}
+                <Divider />
+              </Fragment>
+            ))}
 
             {items[0]}
             <Divider />
