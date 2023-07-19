@@ -1,13 +1,13 @@
-import PlutoLogoIcon from "@/components/icons/PlutoLogoIcon";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { FC, useEffect, useState } from "react";
-import { twMerge } from "tailwind-merge";
-import MaxWidth from "../MaxWidth";
-import HeaderRightMenu from "./Menu";
-import HeaderToggle from "./Menu/Toggle";
-import { HeaderMenu } from "./constant";
-import { HOME_PATH } from "@/routes";
+import PlutoLogoIcon from '@/components/icons/PlutoLogoIcon';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FC, useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+import MaxWidth from '../MaxWidth';
+import HeaderRightMenu from './Menu';
+import HeaderToggle from './Menu/Toggle';
+import { HeaderMenu } from './constant';
+import { HOME_PATH } from '@/routes';
 
 const HeaderMenu: FC<HeaderMenu> = ({ href, label }) => {
   return (
@@ -25,31 +25,28 @@ const Header: FC = () => {
     const closeMenuState = () => {
       setIsMobileMenuOpen(false);
     };
-    router.events.on("routeChangeComplete", closeMenuState);
+    router.events.on('routeChangeComplete', closeMenuState);
 
-    return () => router.events.off("routeChangeComplete", closeMenuState);
+    return () => router.events.off('routeChangeComplete', closeMenuState);
   }, [router.events]);
 
   return (
-    <div className="sticky top-0 text-gray-800 shadow-sm bg-white z-50">
+    <nav className="sticky z-50 block text-gray-800 shadow-sm">
       <MaxWidth
         className={twMerge(
-          "py-6 px-6 gap-12 flex items-center tablet:h-20",
-          isMobileMenuOpen && "flex-col text-center tablet:flex-row"
+          'flex items-center gap-12 px-6 py-6 tablet:h-20',
+          isMobileMenuOpen && 'flex-col text-center tablet:flex-row'
         )}
       >
-        <div className="flex items-center justify-between w-full">
+        <div className="flex w-full items-center justify-between">
           <Link href={{ pathname: HOME_PATH }}>
             <PlutoLogoIcon color="blue" className="w-24" />
           </Link>
-          <HeaderToggle
-            isOpen={isMobileMenuOpen}
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-          />
+          <HeaderToggle isOpen={isMobileMenuOpen} onClick={() => setIsMobileMenuOpen((prev) => !prev)} />
         </div>
         <HeaderRightMenu isOpen={isMobileMenuOpen} />
       </MaxWidth>
-    </div>
+    </nav>
   );
 };
 

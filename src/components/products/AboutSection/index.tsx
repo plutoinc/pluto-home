@@ -1,3 +1,4 @@
+import ScrollMotionInView from "@/components/common/Animation/ScrollMotionInView";
 import PaddingDiv from "@/components/common/PaddingDiv";
 import { ABOUT_PATH } from "@/routes";
 import Link from "next/link";
@@ -10,7 +11,7 @@ const AboutSection: FC<Props> = () => {
   return (
     <div className="bg-[#f4f9ff] mx-auto">
       <PaddingDiv className="py-16 space-y-8 mx-auto max-w-7xl tablet:flex tablet:space-x-16 tablet:space-y-0">
-        <div className="space-y-8 max-w-xs">
+        <ScrollMotionInView className="space-y-8 max-w-xs">
           <div className="text-2xl tablet:text-3xl font-bold">
             Unlock powerful insights with our technology
           </div>
@@ -21,9 +22,9 @@ const AboutSection: FC<Props> = () => {
           >
             About us
           </Link>
-        </div>
+        </ScrollMotionInView>
 
-        <div className="flex-1">
+        <ScrollMotionInView className="flex-1">
           <Disclosure
             type="list"
             title="Gain new insight"
@@ -58,7 +59,7 @@ const AboutSection: FC<Props> = () => {
               "Comparative analysis across institutions.",
             ]}
           />
-        </div>
+        </ScrollMotionInView>
       </PaddingDiv>
     </div>
   );

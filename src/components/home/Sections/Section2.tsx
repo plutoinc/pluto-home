@@ -1,3 +1,4 @@
+import ScrollMotionInView from "@/components/common/Animation/ScrollMotionInView";
 import MaxWidth from "@/components/common/MaxWidth";
 import Image from "next/image";
 import Link, { LinkProps } from "next/link";
@@ -40,7 +41,7 @@ const LinkWrapper: FC<
 const HomeSection2: FC = () => {
   return (
     <MaxWidth className="text-2xl tablet:text-3xl py-24 tablet:py-48 desktop:text-5xl space-y-12">
-      <div className="leading-[1.5]">
+      <ScrollMotionInView className="leading-[1.5]">
         <span className="tablet:font-bold tablet:text-[#3270CD]">
           We solve the challenge of overwhelming amounts of research papers
         </span>
@@ -51,11 +52,11 @@ const HomeSection2: FC = () => {
           academic papers
         </span>
         , instead of a mere search and listing service.
-      </div>
-      <div className="leading-[1.5]">
+      </ScrollMotionInView>
+      <ScrollMotionInView className="leading-[1.5]">
         Scientists have observed a deceleration in scientific progress
-      </div>
-      <div className="space-y-8 desktop:space-y-0 desktop:flex desktop:gap-x-8">
+      </ScrollMotionInView>
+      <ScrollMotionInView className="space-y-8 desktop:space-y-0 desktop:flex desktop:gap-x-8">
         {LOGOS.map((logo) => (
           <LinkWrapper key={logo.href} href={logo.href}>
             <ImageWrapper className={logo.className}>
@@ -63,7 +64,7 @@ const HomeSection2: FC = () => {
             </ImageWrapper>
           </LinkWrapper>
         ))}
-      </div>
+      </ScrollMotionInView>
     </MaxWidth>
   );
 };

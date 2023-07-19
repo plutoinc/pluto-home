@@ -1,3 +1,4 @@
+import ScrollMotionInView from "@/components/common/Animation/ScrollMotionInView";
 import MaxWidth from "@/components/common/MaxWidth";
 import { FC, ReactNode } from "react";
 import { FilePlus, Search, Shield } from "react-feather";
@@ -19,7 +20,7 @@ const Item: FC<Props> = ({ icon, text }) => {
 const Analysis: FC = () => {
   return (
     <MaxWidth className="space-y-20 py-16 tablet:py-24">
-      <div className="text-2xl tablet:text-4xl !leading-[1.5] desktop:text-5xl">
+      <ScrollMotionInView className="text-2xl tablet:text-4xl !leading-[1.5] desktop:text-5xl">
         Through analysis, as the visibility of research-related information
         increases,{" "}
         <b>
@@ -27,8 +28,8 @@ const Analysis: FC = () => {
           in any field.
         </b>{" "}
         Accordingly, the following are expected to be possible:
-      </div>
-      <div className="space-y-14 tablet:space-y-0 tablet:grid tablet:grid-cols-3 tablet:gap-x-7">
+      </ScrollMotionInView>
+      <ScrollMotionInView className="space-y-14 tablet:space-y-0 tablet:grid tablet:grid-cols-3 tablet:gap-x-7">
         <Item
           icon={<Shield className="w-6" />}
           text="Verification of scientific information in the media."
@@ -41,7 +42,7 @@ const Analysis: FC = () => {
           icon={<FilePlus className="w-6" />}
           text="Analysis of differences in research methods by country."
         />
-      </div>
+      </ScrollMotionInView>
     </MaxWidth>
   );
 };

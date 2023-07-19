@@ -1,3 +1,4 @@
+import ScrollMotionInView from "@/components/common/Animation/ScrollMotionInView";
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 import { twMerge } from "tailwind-merge";
@@ -16,7 +17,8 @@ const FeatureCard: FC<Props> = ({
   direction,
 }) => {
   return (
-    <div
+    <ScrollMotionInView
+      viewport={{ once: true, margin: "-200px" }}
       className={twMerge(
         "p-8 bg-[#f4f9ff] tablet:p-12 desktop:p-14 rounded-3xl space-y-8 desktop:flex desktop:gap-x-16 desktop:items-center desktop:space-y-0",
         direction === "right" && "flex-row-reverse"
@@ -32,7 +34,7 @@ const FeatureCard: FC<Props> = ({
           {description}
         </div>
       </div>
-    </div>
+    </ScrollMotionInView>
   );
 };
 
