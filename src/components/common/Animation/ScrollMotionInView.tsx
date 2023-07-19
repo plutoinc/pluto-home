@@ -10,7 +10,7 @@ const ScrollMotionInView: FC<PropsWithChildren<HTMLMotionProps<"div">>> = ({
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-150px" }}
+      viewport={{ margin: "-150px" }}
       transition={{ duration: DEFAULT_DURATION }}
       {...props}
     >
