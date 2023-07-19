@@ -1,12 +1,11 @@
 import {
   AnimationSequence,
   useAnimate,
-  SequenceOptions,
   DynamicAnimationOptions,
   At,
 } from "framer-motion";
-import { MutableRefObject, useCallback } from "react";
-import { DEFAULT_DURATION } from "../common/Animation/constant";
+import { MutableRefObject, useCallback, useEffect, useState } from "react";
+import { DEFAULT_DURATION, DEFAULT_Y } from "../common/Animation/constant";
 
 interface SequenceItem {
   ref: MutableRefObject<any>;
@@ -14,8 +13,14 @@ interface SequenceItem {
   option?: DynamicAnimationOptions & At;
 }
 
-export const useSequenceAnimation = (options?: SequenceOptions) => {
+export const useSequenceAnimation = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
   const [_, animate] = useAnimate();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return useCallback(
     (items: SequenceItem[]) => {
@@ -25,10 +30,14 @@ export const useSequenceAnimation = (options?: SequenceOptions) => {
         return;
       }
 
+      if (!isMounted) {
+        return;
+      }
+
       const sequence: AnimationSequence = items.map(
         ({ ref, withNav, option }) => [
           withNav ? [ref.current, "nav"] : [ref.current],
-          { y: 0, opacity: [0, 1] },
+          { y: [DEFAULT_Y, 0], opacity: [0, 1] },
           {
             duration: DEFAULT_DURATION,
             at: withNav ? "nav" : option?.at,
@@ -37,8 +46,8 @@ export const useSequenceAnimation = (options?: SequenceOptions) => {
         ]
       );
 
-      animate(sequence, options);
+      animate(sequence);
     },
-    [animate, options]
+    [animate, isMounted]
   );
 };
