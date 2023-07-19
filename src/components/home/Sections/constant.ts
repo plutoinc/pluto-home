@@ -24,8 +24,8 @@ export const LOGOS = [
   },
   {
     href: "https://www.vox.com/future-perfect/2023/1/11/23549993/science-research-progress-studies-disruption-technology-artificial-intelligence-biotechnology",
-    alt: voxSrc,
-    src: "https://framerusercontent.com/images/3ajgWx1rprwWWnmWPUy0KLdnn4.png",
+    alt: "Vox",
+    src: voxSrc,
     className: "w-16",
   },
 ];

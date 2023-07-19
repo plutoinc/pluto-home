@@ -11,12 +11,7 @@ const ImageListWrapper: FC<
 export const HGI: FC = () => {
   return (
     <ImageListWrapper className="w-48">
-      <Image
-        width={1000}
-        height={1000}
-        alt="HGI"
-        src="https://framerusercontent.com/images/abePkh5RY6DYdcafEQif1Jr9M.png"
-      />
+      <Image width={1000} height={1000} alt="HGI" src="/sponsors/hgi.webp" />
     </ImageListWrapper>
   );
 };
@@ -28,7 +23,7 @@ export const PoscoCapital: FC = () => {
         width={1000}
         height={1000}
         alt="Posco capital"
-        src="https://framerusercontent.com/images/LcOTRSGdfmU3Pv4081YNYZgTpI.png"
+        src="/sponsors/posco-capital.webp"
       />
     </ImageListWrapper>
   );
@@ -41,7 +36,7 @@ export const JBFinancialGroup: FC = () => {
         width={1000}
         height={1000}
         alt="JB Financial Group"
-        src="https://framerusercontent.com/images/ADPvVMmqS9jpWAlWKdWxlYRPDQ.png"
+        src="/sponsors/jb-financial.webp"
       />
     </ImageListWrapper>
   );
@@ -54,7 +49,7 @@ export const SeoulIP: FC = () => {
         width={1000}
         height={1000}
         alt="SEOUL IP"
-        src="https://framerusercontent.com/images/kVxuAhJG49OK5HuFGn64kP7E8Rs.png"
+        src="/sponsors/seoul-ip.webp"
       />
     </ImageListWrapper>
   );
@@ -67,7 +62,7 @@ export const BeHighInvestment: FC = () => {
         width={1000}
         height={1000}
         alt="BEHIGH INVESTMENT"
-        src="https://framerusercontent.com/images/y4Gfo0hrIh02ut1Z6oWlfLhhmm0.png"
+        src="/sponsors/behigh-investment.webp"
       />
     </ImageListWrapper>
   );
@@ -80,7 +75,7 @@ export const Hashed: FC = () => {
         width={1000}
         height={1000}
         alt="#Hashed"
-        src="https://framerusercontent.com/images/abePkh5RY6DYdcafEQif1Jr9M.png"
+        src="/sponsors/hashed.webp"
       />
     </ImageListWrapper>
   );
@@ -92,8 +87,8 @@ export const BluePoint: FC = () => {
       <Image
         width={1000}
         height={1000}
-        alt="#Hashed"
-        src="https://framerusercontent.com/images/EWCClBvfljEHsagrfaUtGhgfhGc.png"
+        alt="Blue point"
+        src="/sponsors/bluepoint.webp"
       />
     </ImageListWrapper>
   );
