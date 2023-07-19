@@ -1,18 +1,18 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import Image from "next/image";
 import { FC } from "react";
-import ContactUsLink from "../ContactUsButton";
+import ContactUsLink from "../../common/ContactUsLink";
 
 interface Props {}
 
 const HomeSection6: FC<Props> = () => {
   return (
     <div className="bg-[#F0F6FF]">
-      <MaxWidth className="py-16 space-y-8">
-        <div className="text-pluto-dark-blue font-extrabold text-3xl tablet:text-4xl desktop:text-5xl">
+      <MaxWidth className="space-y-8 py-16">
+        <div className="text-3xl font-extrabold text-pluto-dark-blue tablet:text-4xl desktop:text-5xl">
           We offer custom research analytics services
         </div>
-        <div className="text-pluto-deep-blue text-lg tablet:text-2xl">
+        <div className="text-lg text-pluto-deep-blue tablet:text-2xl">
           Based on our database, we provide premium reports:
           <ul className="pl-6">
             <li className="list-disc leading-[2]">
@@ -26,9 +26,9 @@ const HomeSection6: FC<Props> = () => {
           </ul>
         </div>
 
-        <ContactUsLink className="bg-pluto-dark-blue inline-block px-4 py-2.5 text-sm font-bold text-white rounded-lg shadow-md shadow-gray-400" />
+        <ContactUsLink className="inline-block rounded-lg bg-pluto-dark-blue px-4 py-2.5 text-sm font-bold text-white shadow-md shadow-gray-400" />
 
-        <div className="bg-white p-4 rounded-2xl">
+        <div className="rounded-2xl bg-white p-4">
           <Image
             src="https://framerusercontent.com/images/QVj9dPhzO00WJfHuL8S3OIBlI.png"
             alt="Chart image"

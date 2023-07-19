@@ -10,7 +10,7 @@ import ValueCard from "./ValueCard";
 
 const ValueSection: FC = () => {
   return (
-    <PaddingDiv className="flex flex-col items-center py-8 tablet:max-w-7xl mx-auto space-y-8 tablet:space-y-12 desktop:space-y-8 tablet:py-24">
+    <PaddingDiv className="mx-auto flex flex-col items-center space-y-8 py-8 tablet:max-w-7xl tablet:space-y-12 tablet:py-24 desktop:space-y-8">
       <div className="w-full">
         <Carousel
           items={[

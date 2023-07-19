@@ -1,16 +1,16 @@
 import MaxWidth from "@/components/common/MaxWidth";
 import Image from "next/image";
 import { FC } from "react";
-import ContactUsLink from "../ContactUsButton";
+import ContactUsLink from "../../common/ContactUsLink";
 import OurPartners from "../Partners";
 import ScinapseIcon from "@/components/icons/ScinapseIcon";
 
 const Cards: FC = () => {
   return (
-    <div className="tablet:h-[500px] h-[850px] p-12 flex tablet:gap-y-0 gap-y-10 tablet:flex-row flex-col overflow-hidden items-center relative tablet:gap-x-8 bg-pluto-deep-blue rounded-3xl text-white tablet:items-center">
-      <div className="tablet:w-2/5 space-y-8">
+    <div className="relative flex h-[850px] flex-col items-center gap-y-10 overflow-hidden rounded-3xl bg-pluto-deep-blue p-12 text-white tablet:h-[500px] tablet:flex-row tablet:items-center tablet:gap-x-8 tablet:gap-y-0">
+      <div className="space-y-8 tablet:w-2/5">
         <ScinapseIcon className="w-36" />
-        <div className="font-extrabold text-3xl">
+        <div className="text-3xl font-extrabold">
           Designed for
           <br />
           Researchers
@@ -20,13 +20,13 @@ const Cards: FC = () => {
           state-of-the-art insights.
         </div>
 
-        <ContactUsLink className="bg-white inline-block px-4 py-2.5 text-sm rounded-lg font-bold text-pluto-deep-blue shadow-md" />
+        <ContactUsLink className="inline-block rounded-lg bg-white px-4 py-2.5 text-sm font-bold text-pluto-deep-blue shadow-md" />
       </div>
 
-      <div className="tablet:w-[556px] h-[389px] tablet:translate-x-1/4 tablet:relative overflow-hidden rounded-3xl bg-white w-full absolute bottom-0 rounded-t-none tablet:rounded-t-3xl border tablet:border-none">
+      <div className="absolute bottom-0 h-[389px] w-full overflow-hidden rounded-3xl rounded-t-none border bg-white tablet:relative tablet:w-[556px] tablet:translate-x-1/4 tablet:rounded-t-3xl tablet:border-none">
         <Image
           src="https://framerusercontent.com/images/jIoRwB41bckHO8BWLN0CJwa0.png"
-          className="bg-no-repeat absolute object-cover object-center h-full inset-0"
+          className="absolute inset-0 h-full bg-no-repeat object-cover object-center"
           alt="Scinapse main page"
           width={1000}
           height={1000}
@@ -41,7 +41,7 @@ const HomeSection5: FC = () => {
     <div className="bg-white">
       <MaxWidth className="space-y-14 py-16">
         <div className="space-y-2">
-          <div className="font-extrabold text-3xl">Our Partners</div>
+          <div className="text-3xl font-extrabold">Our Partners</div>
           <div className="text-lg tablet:text-2xl">
             Companies and universities of all sizes are innovating their
             research with Pluto

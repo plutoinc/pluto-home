@@ -18,14 +18,14 @@ const PreviousButton = ({ handleClick }: { handleClick: () => void }) => {
           background:
             "linear-gradient(to right,rgba(255,255,255,100), rgba(0,0,0,0))",
         }}
-        className="absolute left-0 w-14 h-full z-10 opacity-0 transition-opacity group-hover:opacity-100"
+        className="absolute left-0 z-10 h-full w-14 opacity-0 transition-opacity group-hover:opacity-100"
       />
 
       <button
         onClick={handleClick}
-        className="absolute -left-3 -translate-y-1/2 top-1/2 z-10 cursor-pointer p-0.5 bg-gray-700 rounded-full opacity-30 transition-opacity group-hover:opacity-100 outline-none"
+        className="absolute -left-3 top-1/2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-gray-700 p-0.5 opacity-30 outline-none transition-opacity group-hover:opacity-100"
       >
-        <ChevronLeft className="text-white w-5 h-5" />
+        <ChevronLeft className="h-5 w-5 text-white" />
       </button>
     </div>
   );
@@ -39,14 +39,14 @@ const NextButton = ({ handleClick }: { handleClick: () => void }) => {
           background:
             "linear-gradient(to left,rgba(255,255,255,100), rgba(0,0,0,0))",
         }}
-        className="absolute right-0 w-14 h-full opacity-0 group-hover:opacity-100 transition-opacity"
+        className="absolute right-0 h-full w-14 opacity-0 transition-opacity group-hover:opacity-100"
       />
 
       <button
         onClick={handleClick}
-        className="absolute -right-3 top-1/2 -translate-y-1/2 z-10 cursor-pointer p-0.5 bg-gray-700 rounded-full opacity-30 transition-opacity group-hover:opacity-100"
+        className="absolute -right-3 top-1/2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-gray-700 p-0.5 opacity-30 transition-opacity group-hover:opacity-100"
       >
-        <ChevronRight className="text-white h-5 w-5" />
+        <ChevronRight className="h-5 w-5 text-white" />
       </button>
     </div>
   );
@@ -67,8 +67,8 @@ const Dots: FC<DotsProps> = ({ current, items, handleClick }) => {
             key={index}
             onClick={() => handleClick(index)}
             className={twMerge(
-              "w-3 h-3 rounded-full bg-gray-200 cursor-pointer transition-colors hover:bg-blue-300 hover:ring-1 hover:ring-gray-200",
-              index === current && "!bg-blue-500 !ring-2 ring-blue-100"
+              "h-3 w-3 cursor-pointer rounded-full bg-gray-200 transition-colors hover:bg-blue-300 hover:ring-1 hover:ring-gray-200",
+              index === current && "!bg-blue-500 !ring-2 ring-blue-100",
             )}
           />
         );
@@ -106,7 +106,7 @@ function Carousel({ items }: Props) {
       translate(index, option?.transition ?? false);
       setCounter(index);
     },
-    [translate]
+    [translate],
   );
 
   const onClickNextButton = useCallback(() => {
@@ -151,7 +151,7 @@ function Carousel({ items }: Props) {
           <div
             ref={track}
             className={twMerge(
-              "py-1 tablet:-translate-x-[calc(50%+16px)] -translate-x-[calc(100%+16px)] flex w-full items-stretch"
+              "flex w-full -translate-x-[calc(100%+16px)] items-stretch py-1 tablet:-translate-x-[calc(50%+16px)]",
             )}
           >
             {items[items.length - 1]}
