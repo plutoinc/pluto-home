@@ -3,6 +3,7 @@ import MaxWidth from "@/components/common/MaxWidth";
 import Image from "next/image";
 import { FC } from "react";
 import ContactUsButton from "../ContactUsButton";
+import chartImageSrc from "@/assets/home/chart.webp";
 
 interface Props {}
 
@@ -29,7 +30,7 @@ const HomeSection6: FC<Props> = () => {
         <ContactUsButton />
         <div className="bg-white p-4 rounded-2xl">
           <Image
-            src="https://framerusercontent.com/images/QVj9dPhzO00WJfHuL8S3OIBlI.png"
+            src={chartImageSrc}
             alt="Chart image"
             width={968}
             height={512}

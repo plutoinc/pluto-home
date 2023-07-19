@@ -2,6 +2,7 @@ import ScrollMotionInView from "@/components/common/Animation/ScrollMotionInView
 import MaxWidth from "@/components/common/MaxWidth";
 import Image from "next/image";
 import { FC } from "react";
+import graphImage from "@/assets/home/graph.webp";
 
 interface Props {}
 
@@ -14,12 +15,7 @@ const HomeSection1: FC<Props> = () => {
           Groundbreaking Discoveries
         </ScrollMotionInView>
         <div className="h-[345px] min-h-[268px] flex justify-center items-center">
-          <Image
-            width={420}
-            height={443}
-            src="https://framerusercontent.com/images/h1ikR93Tg2zccNVRe7qkR0dJs.png"
-            alt="Graph image"
-          />
+          <Image width={420} height={443} src={graphImage} alt="Graph image" />
         </div>
       </MaxWidth>
     </div>

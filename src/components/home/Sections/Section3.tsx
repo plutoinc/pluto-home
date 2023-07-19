@@ -21,11 +21,7 @@ const HomeSection3: FC<Props> = () => {
             experience.
           </span>
         </ScrollMotionInView>
-        <video
-          src="https://framerusercontent.com/assets/hFrgPhvwtw2XF7MhOvYCv5CNun0.mp4"
-          autoPlay
-          muted
-        />
+        <video src="/pluto-technology.mp4" autoPlay muted />
       </MaxWidth>
     </div>
   );

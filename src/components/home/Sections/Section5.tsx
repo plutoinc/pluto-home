@@ -5,6 +5,7 @@ import ContactUsButton from "../ContactUsButton";
 import OurPartners from "../Partners";
 import ScinapseIcon from "@/components/icons/ScinapseIcon";
 import ScrollMotionInView from "@/components/common/Animation/ScrollMotionInView";
+import scinapseHomeImageSrc from "@/assets/home/scinapse-home.webp";
 
 const Cards: FC = () => {
   return (
@@ -24,7 +25,7 @@ const Cards: FC = () => {
       </div>
       <div className="tablet:w-[556px] h-[389px] tablet:translate-x-1/4 tablet:relative overflow-hidden rounded-3xl bg-white w-full absolute bottom-0 rounded-t-none tablet:rounded-t-3xl border tablet:border-none">
         <Image
-          src="https://framerusercontent.com/images/jIoRwB41bckHO8BWLN0CJwa0.png"
+          src={scinapseHomeImageSrc}
           className="bg-no-repeat absolute object-cover object-center h-full inset-0"
           alt="Scinapse main page"
           width={1000}

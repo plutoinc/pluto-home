@@ -24,7 +24,7 @@ export const SNU: FC = () => {
         width={1000}
         height={1000}
         alt="Seoul National University"
-        src="https://framerusercontent.com/images/x10HwQaWNapJk62fGotqOqETbc.png?scale-down-to=1024"
+        src="/partners/snu.webp"
       />
     </ImageListWrapper>
   );
@@ -37,7 +37,7 @@ export const ICHMET2020: FC = () => {
         width={1000}
         height={1000}
         alt="ICHMET2020"
-        src="https://framerusercontent.com/images/pvL841ZcndBgGgJDCJFLJdPuXyc.png?scale-down-to=1024"
+        src="/partners/ichmet2020.webp"
       />
     </ImageListWrapper>
   );
@@ -50,7 +50,7 @@ export const POSTECH: FC = () => {
         width={1000}
         height={1000}
         alt="POSTECH"
-        src="https://framerusercontent.com/images/hNDuuk1gY4rkWSppPGRXd4db4A.png?scale-down-to=2048"
+        src="/partners/postech.webp"
       />
     </ImageListWrapper>
   );
@@ -63,7 +63,7 @@ export const KoreaUniversity: FC = () => {
         width={1000}
         height={1000}
         alt="Korea University"
-        src="https://framerusercontent.com/images/ahiimwfMWTciQmXwGq1Cji2UUU.png?scale-down-to=4096"
+        src="/partners/korea-univ.webp"
       />
     </ImageListWrapper>
   );
@@ -76,7 +76,7 @@ export const Posco: FC = () => {
         width={1000}
         height={1000}
         alt="Posco"
-        src="https://framerusercontent.com/images/D0z2zH0r7ImbAaefLOnejehLxac.png?scale-down-to=1024"
+        src="/partners/posco.webp"
       />
     </ImageListWrapper>
   );
@@ -89,7 +89,7 @@ export const NatureConference: FC = () => {
         width={1000}
         height={1000}
         alt="Nature Conference"
-        src="https://framerusercontent.com/images/rXpWJpRBKigTFmC0hRDshS8ZiXs.png?scale-down-to=1024"
+        src="/partners/nature-conference.webp"
       />
     </ImageListWrapper>
   );
