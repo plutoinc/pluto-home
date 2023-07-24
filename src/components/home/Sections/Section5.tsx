@@ -1,10 +1,10 @@
 import MaxWidth from '@/components/common/MaxWidth';
 import Image from 'next/image';
 import { FC } from 'react';
-import ContactUsLink from '../../common/ContactUsLink';
 import OurPartners from '../Partners';
 import ScinapseIcon from '@/components/icons/ScinapseIcon';
 import ScrollMotionInView from '@/components/common/Animation/ScrollMotionInView';
+import ContactUsLink from '@/components/common/ContactUsLink';
 
 const Cards: FC = () => {
   return (
@@ -25,7 +25,7 @@ const Cards: FC = () => {
 
       <div className="absolute bottom-0 h-[389px] w-full overflow-hidden rounded-3xl rounded-t-none border bg-white tablet:relative tablet:w-[556px] tablet:translate-x-1/4 tablet:rounded-t-3xl tablet:border-none">
         <Image
-          src="https://framerusercontent.com/images/jIoRwB41bckHO8BWLN0CJwa0.png"
+          src="/assets/home/scinapse-home.webp"
           className="absolute inset-0 h-full bg-no-repeat object-cover object-center"
           alt="Scinapse main page"
           width={1000}

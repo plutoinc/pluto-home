@@ -1,8 +1,7 @@
 import ScrollMotionInView from '@/components/common/Animation/ScrollMotionInView';
 import MaxWidth from '@/components/common/MaxWidth';
-import Image from 'next/image';
 import { FC } from 'react';
-import ContactUsLink from '../../common/ContactUsLink';
+import ContactUsLink from '@/components/common/ContactUsLink';
 
 interface Props {}
 
@@ -26,12 +25,7 @@ const HomeSection6: FC<Props> = () => {
         </ScrollMotionInView>
         <ContactUsLink className="inline-block rounded-lg bg-pluto-dark-blue px-4 py-2.5 text-sm font-bold text-white shadow-md shadow-gray-400" />
         <div className="rounded-2xl bg-white p-4">
-          <Image
-            src="https://framerusercontent.com/images/QVj9dPhzO00WJfHuL8S3OIBlI.png"
-            alt="Chart image"
-            width={968}
-            height={512}
-          />
+          <video src="/assets/home/renewable_energy.mov" autoPlay muted />
         </div>
       </MaxWidth>
     </div>
