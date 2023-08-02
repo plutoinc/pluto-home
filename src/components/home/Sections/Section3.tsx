@@ -17,7 +17,7 @@ const HomeSection3: FC<Props> = () => {
             Through our database, we provide a more comprehensive research experience.
           </span>
         </ScrollMotionInView>
-        <video src="/assets/home/video/pluto-technology.mp4" autoPlay muted />
+        <video src="/assets/home/video/pluto-technology.mp4" autoPlay muted loop />
       </MaxWidth>
     </div>
   );
