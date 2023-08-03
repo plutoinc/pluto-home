@@ -42,7 +42,7 @@ const HomeSection5: FC = () => {
       <MaxWidth className="space-y-14 py-16">
         <ScrollMotionInView className="space-y-14">
           <div className="space-y-2">
-            <div className="text-3xl font-extrabold">Our Partners</div>
+            <div className="text-3xl font-extrabold">Trusted by</div>
             <div className="text-lg tablet:text-2xl">
               Companies and universities of all sizes are innovating their research with Pluto
             </div>
