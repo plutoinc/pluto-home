@@ -15,7 +15,7 @@ const Footer: FC<Props> = () => {
       <div className="mx-auto max-w-7xl space-y-8 p-8 tablet:px-24 tablet:py-12">
         <div className="flex flex-col items-center space-y-8 tablet:flex-row tablet:items-center tablet:justify-between tablet:space-y-0">
           <div className="items-centers flex gap-x-6">
-            <Link href="https://x.com/Scinapse_Pluto" target="_blank">
+            <Link href="https://x.com/Scinapse_" target="_blank">
               <TwitterIcon className="w-8" />
             </Link>
             <Link href="https://www.linkedin.com/company/pluto-network/" target="_blank">
