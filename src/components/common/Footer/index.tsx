@@ -6,6 +6,7 @@ import PlutoLogoIcon from '../../icons/PlutoLogoIcon';
 import ScinapseLogoIcon from '../../icons/ScinapseLogoIcon';
 import TwitterIcon from '../../icons/TwitterIcon';
 import { HOME_PATH } from '@/routes';
+import { PLUTO_BLOG_LINK } from '@/constant/link';
 
 interface Props {}
 
@@ -21,7 +22,7 @@ const Footer: FC<Props> = () => {
             <Link href="https://www.linkedin.com/company/pluto-network/" target="_blank">
               <LinkedInIcon className="w-8" />
             </Link>
-            <Link href="https://medium.com/pluto-inc" target="_blank">
+            <Link href={PLUTO_BLOG_LINK} target="_blank">
               <MediumLogoIcon className="w-8" />
             </Link>
             <Link href="https://www.scinapse.io/" target="_blank">
