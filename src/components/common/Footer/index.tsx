@@ -8,6 +8,8 @@ import TwitterIcon from '../../icons/TwitterIcon';
 import { HOME_PATH } from '@/routes';
 import { PLUTO_BLOG_LINK } from '@/constant/link';
 
+const THIS_YEAR = new Date().getFullYear()
+
 interface Props {}
 
 const Footer: FC<Props> = () => {
@@ -38,7 +40,7 @@ const Footer: FC<Props> = () => {
         <div className="h-[1px] bg-[#113769]" />
 
         <div className="space-y-6 text-center text-sm text-[#b4caea] tablet:flex tablet:items-center tablet:justify-between tablet:space-y-0">
-          <div>© 2023 Pluto Labs, Inc. All rights reserved.</div>
+          <div>© {THIS_YEAR} Pluto Labs, Inc. All rights reserved.</div>
           <div className="flex flex-col items-center gap-y-1.5 space-x-1 tablet:flex-row">
             <div>support@pluto.im</div>
             <div className="hidden tablet:block">|</div>
