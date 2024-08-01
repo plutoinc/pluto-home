@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import LinkedInIcon from '../../icons/LinkedInIcon';
-import MediumLogoIcon from '../../icons/MediumLogoIcon';
 import PlutoLogoIcon from '../../icons/PlutoLogoIcon';
 import ScinapseLogoIcon from '../../icons/ScinapseLogoIcon';
 import TwitterIcon from '../../icons/TwitterIcon';
 import { HOME_PATH } from '@/routes';
 import { PLUTO_BLOG_LINK } from '@/constant/link';
+import BlogLogoIcon from '@/components/icons/BlogIcon';
 
-const THIS_YEAR = new Date().getFullYear()
+const THIS_YEAR = new Date().getFullYear();
 
 interface Props {}
 
@@ -25,7 +25,7 @@ const Footer: FC<Props> = () => {
               <LinkedInIcon className="w-8" />
             </Link>
             <Link href={PLUTO_BLOG_LINK} target="_blank">
-              <MediumLogoIcon className="w-8" />
+              <BlogLogoIcon className="w-8" />
             </Link>
             <Link href="https://www.scinapse.io/" target="_blank">
               <ScinapseLogoIcon className="w-8" />
